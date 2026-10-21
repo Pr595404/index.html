@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prince Kumar Sahu — Content Writer, Strategist &amp; AI/ML Student</title>
+  <meta name="description" content="Verified Portfolio of Prince Kumar Sahu: Content Writer, Strategist, and B.Tech CSE (AI &amp; ML) student at Manav Rachna University, Faridabad.">
+  <meta name="author" content="Prince Kumar Sahu">
+  <meta name="theme-color" content="#080A12">
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN SYSTEM & DARK STUDIO THEME (3D VIEWPORT INSPIRED)
+       ========================================================================== */
+    :root {
+      --bg-void: #080A12;
+      --bg-surface: #0E1220;
+      --bg-elevated: #151B2D;
+      --bg-card: rgba(20, 26, 43, 0.78);
+      --bg-card-hover: rgba(29, 37, 60, 0.90);
+      --bg-glass: rgba(10, 13, 24, 0.78);
+      --border-dim: rgba(255, 255, 255, 0.07);
+      --border-mid: rgba(255, 255, 255, 0.13);
+      --border-bright: rgba(139, 92, 246, 0.48);
+      --text-white: #F8FAFC;
+      --text-light: #E2E8F0;
+      --text-muted: #9AA6BD;
+      --text-dim: #68758D;
+      --accent-primary: #8B5CF6;
+      --accent-secondary: #22D3EE;
+      --accent-tertiary: #F472B6;
+      --accent-amber: #FBBF24;
+      --accent-primary-glow: rgba(139, 92, 246, 0.22);
+      --accent-secondary-glow: rgba(34, 211, 238, 0.18);
+      --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-display: "Space Grotesk", Inter, sans-serif;
+      --font-mono: "SFMono-Regular", Consolas, monospace;
+      --radius-sm: 8px; --radius-md: 14px; --radius-lg: 20px; --radius-xl: 28px; --radius-full: 9999px;
+      --shadow-card: 0 16px 48px rgba(0, 0, 0, 0.32);
+      --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.10);
+      --transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-void);
+      color: var(--text-light);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Scroll Progress Bar */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+      z-index: 1000;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1220px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ==========================================================================
+       2. STICKY STUDIO NAVIGATION
+       ========================================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-dim);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4.5rem;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: var(--text-white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-cube {
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: #06080e;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      box-shadow: 0 0 18px var(--accent-primary-glow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent-primary);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.32rem 0.8rem;
+      border-radius: var(--radius-full);
+      background: rgba(139, 92, 246, 0.08);
+      border: 1px solid rgba(139, 92, 246, 0.28);
+      color: var(--accent-primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      box-shadow: 0 0 8px var(--accent-primary);
+    }
+
+    /* ==========================================================================
+       3. SECTION 1: HERO SECTION (FULL-SCREEN 3D WEBGL CANVAS + OVERLAY)
+       ========================================================================== */
+    .hero-viewport {
+      position: relative;
+      min-height: calc(100vh - 4.5rem);
+      display: flex;
+      align-items: center;
+      padding: 4rem 0;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-dim);
+    }
+
+    #webgl-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: auto;
+    }
+
+    .hero-hud-overlay {
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      z-index: 2;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      display: flex;
+      gap: 1.25rem;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 3;
+    }
+
+    .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-primary);
+      background: rgba(139, 92, 246, 0.08);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.35rem, 4.8vw, 3.9rem);
+      font-weight: 850;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--text-white);
+      margin-bottom: 1.25rem;
+    }
+
+    .gradient-accent {
+      background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 55%, var(--accent-tertiary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 38rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.82rem 1.55rem;
+      border-radius: var(--radius-full);
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all var(--transition);
+      font-family: var(--font-sans);
+    }
+
+    .btn-primary {
+      background: var(--accent-primary);
+      color: #06080e;
+      box-shadow: 0 4px 22px var(--accent-primary-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+    }
+
+    .btn-reel {
+      background: rgba(17, 24, 39, 0.9);
+      color: var(--text-white);
+      border-color: var(--accent-secondary);
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+    }
+
+    .btn-reel:hover {
+      background: rgba(34, 211, 238, 0.14);
+      transform: translateY(-2px);
+    }
+
+    .play-icon-circle {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: var(--accent-secondary);
+      color: #06080e;
+      display: inline-grid;
+      place-items: center;
+      font-size: 0.7rem;
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-light);
+      border-color: var(--border-mid);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--text-white);
+    }
+
+    /* Interactive 3D Copy & Strategy Inspector on Hero Right */
+    .hero-studio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-xl);
+      padding: 1.65rem;
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-card), var(--shadow-glow);
+      position: relative;
+    }
+
+    .studio-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.9rem;
+      margin-bottom: 1.1rem;
+      border-bottom: 1px solid var(--border-dim);
+    }
+
+    .studio-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      background: rgba(139, 92, 246, 0.1);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .studio-select {
+      background: var(--bg-surface);
+      color: var(--text-white);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-sm);
+      padding: 0.35rem 0.65rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .render-pass-box {
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 0.9rem;
+    }
+
+    .pass-wireframe {
+      background: rgba(251, 113, 133, 0.06);
+      border: 1px solid rgba(251, 113, 133, 0.25);
+    }
+
+    .pass-final {
+      background: rgba(139, 92, 246, 0.07);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+
+    .pass-label {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ==========================================================================
+       4. SECTION 3 & 4: WORK CATEGORIES & PROJECT GRID (WITH HOVER PREVIEW)
+       ========================================================================== */
+    .section-block {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--border-dim);
+    }
+
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-primary);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .section-heading {
+      font-size: clamp(1.85rem, 3.4vw, 2.65rem);
+      font-weight: 800;
+      color: var(--text-white);
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+
+    /* Category Filter Pills */
+    .category-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .cat-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-dim);
+      color: var(--text-muted);
+      padding: 0.52rem 1.05rem;
+      border-radius: var(--radius-full);
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .cat-btn:hover {
+      color: var(--text-white);
+      border-color: var(--border-mid);
+    }
+
+    .cat-btn.active {
+      background: var(--accent-primary);
+      color: #06080e;
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 18px var(--accent-primary-glow);
+    }
+
+    /* Project Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.65rem;
+    }
+
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-bright);
+      box-shadow: var(--shadow-card), var(--shadow-glow);
+    }
+
+    /* Animated Thumbnail Preview (Simulates GIF/Video loop on hover) */
+    .project-thumb {
+      height: 195px;
+      background: radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.14), rgba(12, 17, 29, 0.95));
+      border-bottom: 1px solid var(--border-dim);
+      padding: 1.25rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .thumb-wireframe-grid {
+      position: absolute;
+      inset: 0;
+      background-size: 24px 24px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      transition: transform 0.6s ease, opacity 0.4s ease;
+    }
+
+    .project-card:hover .thumb-wireframe-grid {
+      transform: scale(1.12) rotate(-1deg);
+      opacity: 0.85;
+    }
+
+    .thumb-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.22rem 0.6rem;
+      border-radius: var(--radius-full);
+    }
+
+    .badge-verified {
+      background: rgba(34, 211, 238, 0.14);
+      color: var(--accent-secondary);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+    }
+
+    .badge-concept {
+      background: rgba(251, 191, 36, 0.14);
+      color: var(--accent-amber);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+    }
+
+    .badge-personal {
+      background: rgba(244, 114, 182, 0.14);
+      color: var(--accent-tertiary);
+      border: 1px solid rgba(244, 114, 182, 0.35);
+    }
+
+    .hover-gif-pill {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      background: rgba(0, 0, 0, 0.55);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border-dim);
+      transition: all var(--transition);
+    }
+
+    .project-card:hover .hover-gif-pill {
+      color: var(--accent-primary);
+      border-color: var(--accent-primary);
+    }
+
+    /* Animated Live Preview Ticker inside Thumbnail */
+    .thumb-live-preview {
+      position: relative;
+      z-index: 2;
+      background: rgba(6, 8, 14, 0.82);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 0.9rem;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--text-light);
+      transition: transform var(--transition), border-color var(--transition);
+    }
+
+    .project-card:hover .thumb-live-preview {
+      transform: translateY(-3px);
+      border-color: var(--accent-primary);
+    }
+
+    .preview-line-anim {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--accent-primary);
+    }
+
+    .project-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .project-cat-label {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--accent-secondary);
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-title {
+      font-size: 1.28rem;
+      font-weight: 800;
+      color: var(--text-white);
+      margin-bottom: 0.6rem;
+      line-height: 1.25;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .project-footer {
+      padding-top: 0.95rem;
+      border-top: 1px solid var(--border-dim);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+    }
+
+    /* ==========================================================================
+       5. SECTION 6: ABOUT PAGE (BIO, PROFICIENCY, WORKFLOW & TECH SPECS)
+       ========================================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .avatar-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      position: relative;
+    }
+
+    .avatar-visual {
+      width: 88px;
+      height: 88px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+      display: grid;
+      place-items: center;
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: #06080e;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 0 30px var(--accent-primary-glow);
+    }
+
+    .spec-list {
+      list-style: none;
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .spec-list li {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid var(--border-dim);
+      font-size: 0.88rem;
+    }
+
+    .spec-key {
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    .spec-val {
+      color: var(--text-white);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .proficiency-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius-lg);
+      padding: 1.65rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-bar-wrap {
+      margin-bottom: 1rem;
+    }
+
+    .skill-bar-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .skill-track {
+      height: 7px;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: var(--radius-full);
+    }
+
+    /* ==========================================================================
+       6. SECTION 7: RESOURCES, TEMPLATES & EDITORIAL GUIDES
+       ========================================================================== */
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .resource-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ==========================================================================
+       7. SECTION 8: CONTACT HUB & COMMISSION STATUS
+       ========================================================================== */
+    .contact-panel {
+      background: linear-gradient(135deg, rgba(12, 17, 29, 0.96), rgba(18, 33, 56, 0.88));
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      box-shadow: var(--shadow-card), var(--shadow-glow);
+    }
+
+    .commission-box {
+      background: var(--bg-void);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-lg);
+      padding: 1.65rem;
+    }
+
+    /* ==========================================================================
+       8. MODALS (SECTION 2: SHOWREEL MODAL & SECTION 5: PROJECT PAGE TEMPLATE)
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 6, 12, 0.88);
+      backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition), visibility var(--transition);
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-dialog {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-xl);
+      width: 100%;
+      max-width: 980px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2.25rem;
+      position: relative;
+      box-shadow: var(--shadow-card);
+    }
+
+    .modal-close {
+      position: sticky;
+      top: 0;
+      float: right;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-mid);
+      color: var(--text-white);
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      display: grid;
+      place-items: center;
+      z-index: 10;
+    }
+
+    .modal-close:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+
+    /* Project Page Template Tabs (Wireframe / Clay Draft / Audit / Final Render) */
+    .wip-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0 1.25rem;
+      border-bottom: 1px solid var(--border-dim);
+      padding-bottom: 0.85rem;
+    }
+
+    .wip-tab {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-dim);
+      color: var(--text-muted);
+      padding: 0.45rem 0.95rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .wip-tab.active {
+      background: rgba(139, 92, 246, 0.14);
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+
+    .doc-viewer {
+      background: var(--bg-void);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text-light);
+      max-height: 440px;
+      overflow-y: auto;
+    }
+
+    .doc-viewer h4 {
+      color: var(--accent-primary);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin: 1.2rem 0 0.45rem;
+    }
+
+    .doc-viewer h4:first-child {
+      margin-top: 0;
+    }
+
+    .doc-viewer table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.82rem;
+    }
+
+    .doc-viewer th, .doc-viewer td {
+      border: 1px solid var(--border-dim);
+      padding: 0.55rem 0.7rem;
+      text-align: left;
+    }
+
+    .doc-viewer th {
+      background: var(--bg-elevated);
+      color: var(--text-white);
+      font-family: var(--font-mono);
+    }
+
+    /* Interactive Showreel Player Screen */
+    .reel-screen {
+      background: radial-gradient(circle at center, #132038 0%, #06080e 100%);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      margin: 1.25rem 0;
+    }
+
+    .reel-progress-bar {
+      height: 4px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+
+    .reel-progress-fill {
+      height: 100%;
+      width: 20%;
+      background: var(--accent-primary);
+      transition: width 0.35s ease;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--accent-primary);
+      color: var(--text-white);
+      padding: 0.8rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-size: 0.86rem;
+      font-weight: 600;
+      z-index: 3000;
+      transform: translateY(120px);
+      opacity: 0;
+      transition: all var(--transition);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid, .about-grid, .contact-panel {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+
+    .recruiter-dialog { width:min(94vw,760px); max-height:min(88vh,860px); padding:0; color:var(--text-light); background:var(--bg-surface); border:1px solid var(--border-mid); border-radius:var(--radius-xl); box-shadow:0 32px 100px rgba(0,0,0,.66); }
+    .recruiter-dialog::backdrop { background:rgba(3,5,12,.78); backdrop-filter:blur(8px); }
+    .recruiter-dialog-inner { position:relative; padding:clamp(1.3rem,4vw,2.4rem); }
+    .recruiter-dialog h2 { color:var(--text-white); font:800 clamp(1.8rem,4vw,2.6rem)/1.1 var(--font-display); letter-spacing:-.04em; margin:.3rem 0; }
+    .recruiter-role { color:var(--accent-secondary); font-weight:700; }
+    .recruiter-intro { max-width:62ch; color:var(--text-muted); margin:1rem 0 1.2rem; }
+    .recruiter-facts { display:grid; grid-template-columns:repeat(3,1fr); gap:.65rem; margin:1rem 0 1.35rem; }
+    .recruiter-facts div { padding:.9rem; border:1px solid var(--border-dim); border-radius:var(--radius-md); background:var(--bg-card); }
+    .recruiter-facts span { display:block; color:var(--accent-primary); font:700 .68rem var(--font-mono); letter-spacing:.07em; margin-bottom:.45rem; }
+    .recruiter-facts strong { color:var(--text-light); font-size:.82rem; line-height:1.5; }
+    .recruiter-dialog h3 { color:var(--text-white); font-size:1rem; margin-bottom:.55rem; }
+    .recruiter-proof-list { display:grid; gap:.5rem; }
+    .recruiter-proof-list button { display:flex; justify-content:space-between; align-items:center; gap:1rem; width:100%; text-align:left; padding:.8rem .9rem; color:var(--text-light); background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-md); cursor:pointer; transition:var(--transition); }
+    .recruiter-proof-list button:hover { border-color:var(--border-bright); transform:translateY(-2px); }
+    .recruiter-proof-list strong { color:var(--text-white); }
+    .recruiter-proof-list span { color:var(--text-muted); font-size:.8rem; }
+    .recruiter-actions { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.2rem; }
+    .recruiter-location { margin-top:1rem; color:var(--text-dim); font: .72rem var(--font-mono); }
+    @media(max-width:620px) { .recruiter-facts {grid-template-columns:1fr;} .recruiter-proof-list button {align-items:flex-start; flex-direction:column; gap:.2rem;} .recruiter-dialog-inner {padding:1.25rem;} }
+
+    /* Studio refinements */
+    .navbar { position: absolute; top: 1rem; left: 50%; width: min(96%, 1320px); transform: translateX(-50%); opacity: 1; border: 1px solid transparent; border-radius: var(--radius-full); background: transparent; box-shadow: none; transition: transform .45s cubic-bezier(.16,1,.3,1), opacity .3s ease, background .3s ease; }
+    .navbar.is-floating { position: fixed; transform: translate(-50%, 0); opacity: 1; border-color: var(--border-mid); background: var(--bg-glass); box-shadow: var(--shadow-card); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .nav-inner { height: 3.8rem; }
+    .brand { font-size: .92rem; flex-shrink: 0; }
+    .brand-cube { width: 1.8rem; height: 1.8rem; }
+    .nav-links { gap: clamp(.45rem, .9vw, .85rem); }
+    .nav-links a { font-size: .78rem; white-space: nowrap; }
+    .nav-links a.active { color: var(--accent-secondary); }
+    .nav-right .status-pill, .nav-right .btn { display:none; }
+    .menu-toggle { display:none; }
+    :focus-visible { outline: 2px solid var(--accent-secondary); outline-offset: 4px; }
+    .hero-viewport { min-height: 100svh; background: radial-gradient(ellipse at 74% 44%, rgba(139,92,246,.10), transparent 43%), radial-gradient(ellipse at 12% 82%, rgba(34,211,238,.06), transparent 38%); }
+    .hero-studio-card { background: var(--bg-card); border-color: var(--border-mid); }
+    .project-card { background: var(--bg-card); }
+    .section-block { scroll-margin-top: 6rem; }
+    [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.16,1,.3,1); }
+    [data-reveal].revealed { opacity: 1; transform: none; }
+    .sample-panel { display:grid; grid-template-columns: 1fr 1.15fr; align-items:center; gap:1rem 3rem; }
+    .sample-panel blockquote { font-family:var(--font-display); color:var(--text-white); font-size:clamp(1.35rem,2.6vw,2.2rem); line-height:1.35; border-left:2px solid var(--accent-primary); padding-left:1.25rem; }
+    .sample-note { color:var(--text-muted); grid-column:2; }
+    .sample-panel .btn { justify-self:start; }
+    @media (max-width: 1100px) { .brand span:last-child { display:none; } .nav-links { gap:.55rem; } .nav-links a {font-size:.73rem;} }
+    @media (max-width: 920px) {
+      .navbar { top:.65rem; width:calc(100% - 1.2rem); border-radius:1.25rem; }
+      .nav-inner { height:auto; min-height:3.8rem; flex-wrap:wrap; padding:.45rem .6rem; }
+      .brand span:last-child { display:inline; }
+      .nav-inner nav { order:3; width:100%; }
+      .menu-toggle { display:block; margin-left:auto; border:1px solid var(--border-mid); color:var(--text-light); background:var(--bg-elevated); border-radius:var(--radius-full); padding:.5rem .9rem; font:600 .82rem var(--font-sans); }
+      .nav-links { display:none; flex-wrap:wrap; padding:.45rem .2rem .65rem; }
+      .navbar.menu-open .nav-links { display:flex; }
+      .nav-links a { font-size:.82rem; padding:.35rem .4rem; }
+      .hero-viewport { min-height:100svh; padding:6rem 0 3rem; }
+      .hero-hud-overlay { display:none; }
+      .project-grid { grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); }
+    }
+    @media (max-width: 560px) { .sample-panel {grid-template-columns:1fr;} .sample-note {grid-column:1;} .hero-title {font-size:clamp(2.3rem,12vw,3.4rem);} .project-grid {grid-template-columns:1fr;} }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after {scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important;} [data-reveal] {opacity:1; transform:none;} }
+
+  </style>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar" id="site-nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-cube">P</span>
+        <span>Prince Kumar Sahu</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+        <ul class="nav-links" id="primary-links">
+          <li><a href="#hero">Hero</a></li><li><a href="#work">Work</a></li>
+          <li><a href="#category">Category</a></li><li><a href="#grid">Grid</a></li>
+          <li><a href="#about">About</a></li><li><a href="#spec">Spec</a></li>
+          <li><a href="#resource">Resource</a></li><li><a href="#sample">Sample</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="status-pill" title="Verified Availability">
+          <span class="pulse-dot"></span>
+          <span>Available: Internships &amp; Freelance</span>
+        </div>
+        <button class="btn btn-reel" style="padding:0.45rem 0.95rem; font-size:0.8rem;" onclick="openShowreelModal()">
+          <span class="play-icon-circle">▶</span>
+          <span>Showreel</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         1. HERO SECTION (FULL-SCREEN 3D WEBGL PARTICLE MESH + OVERLAY)
+         ====================================================================== -->
+    <section class="hero-viewport" id="hero">
+      <canvas id="webgl-canvas" aria-label="Interactive 3D Editorial Knowledge Graph"></canvas>
+
+      <div class="hero-hud-overlay">
+        <span>VIEWPORT: INTERACTIVE 3D NODE MESH</span>
+        <span>FPS: 60</span>
+        <span>INTEGRITY MODE: 100% VERIFIED DATA</span>
+      </div>
+
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow-badge">
+            <span>⚡</span> Content Writer, Strategist &amp; AI/ML CSE Student
+          </div>
+          <h1 class="hero-title">
+            Engineering <span class="gradient-accent">research-backed writing</span> &amp; high-converting strategy.
+          </h1>
+          <p class="hero-sub">
+            I'm <strong>Prince Kumar Sahu</strong> (Faridabad, India) — combining a B.Tech in Computer Science (AI &amp; ML) at Manav Rachna University with certified content training at <strong>Sanyukt</strong>, numerical fact-checking audits, and conversion copywriting.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#work" class="btn btn-primary">
+              <span>Explore Work (12 Verified Projects)</span>
+              <span>↓</span>
+            </a>
+            <button type="button" class="btn btn-reel" onclick="openShowreelModal()">
+              <span class="play-icon-circle">▶</span>
+              <span>Play Interactive Portfolio Reel</span>
+            </button>
+            <button type="button" class="btn btn-ghost" data-open-recruiter>Recruiter Brief <span aria-hidden="true">&rarr;</span></button>
+            <a href="#contact" class="btn btn-ghost">Contact &amp; Commission Status</a>
+          </div>
+        </div>
+
+        <!-- Live Copy & Audit Render Pass Widget -->
+        <div class="hero-studio-card">
+          <div class="studio-card-header">
+            <span class="studio-tag">Live Copy Render Pass</span>
+            <select id="hero-pass-select" class="studio-select" aria-label="Select Copy Scenario">
+              <option value="restaurant">Restaurant Booking CTA</option>
+              <option value="boat">boAt Report Claim Audit</option>
+              <option value="campaign">Paid Ads Hook Critique</option>
+            </select>
+          </div>
+
+          <div class="render-pass-box pass-wireframe">
+            <div class="pass-label">
+              <span style="color:var(--accent-tertiary);">Pass 01 · Unaudited / Friction Draft</span>
+              <span style="color:var(--accent-tertiary);"> High Drop-off</span>
+            </div>
+            <p id="pass-before-text" style="font-size:0.95rem; color:var(--text-muted); text-decoration:line-through;">
+              "Click here in order to submit your inquiry for our reservation consideration"
+            </p>
+            <p id="pass-before-note" style="font-size:0.78rem; color:var(--text-dim); margin-top:0.35rem;">
+              11 words, passive voice, leaves hungry mobile diners uncertain if a table is booked.
+            </p>
+          </div>
+
+          <div class="render-pass-box pass-final">
+            <div class="pass-label">
+              <span style="color:var(--accent-primary);">Pass 02 · Prince's Final Render</span>
+              <span style="color:var(--accent-primary);">✓ Verified Clarity</span>
+            </div>
+            <p id="pass-after-text" style="font-size:1.18rem; font-weight:800; color:var(--text-white);">
+              "Book a table for tonight"
+            </p>
+            <p id="pass-after-note" style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem;">
+              5 words, zero cognitive friction, answers immediate intent on mobile viewports.
+            </p>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.76rem; color:var(--text-dim); padding-top:0.4rem;">
+            <span>Move mouse to rotate 3D background mesh</span>
+            <button type="button" class="cat-btn" style="padding:0.28rem 0.7rem; font-size:0.74rem;" id="cycle-pass-btn">Next Pass ↻</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3 & 4. WORK CATEGORIES & PROJECT GRID (CLICK TO OPEN FULL TEMPLATE)
+         ====================================================================== -->
+    <section class="section-block" id="work">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="section-eyebrow">3 &amp; 4. Work Categories &amp; Interactive Grid</span>
+            <h2 class="section-heading">Verified Deliverables &amp; Concept Architecture</h2>
+          </div>
+          <p style="font-size:0.9rem; color:var(--text-muted); max-width:32rem;">
+            Hover over any card for a live content preview. Click any card to open the <strong>5. Project Page Template</strong> with Wireframe, Draft, Audit, and Final Render tabs.
+          </p>
+        </div>
+
+        <!-- 6 Categories mapped cleanly from prompt structure to actual verified portfolio -->
+        <div class="category-bar" id="category" role="tablist" aria-label="Filter projects by category">
+          <button class="cat-btn active" data-cat="all">All Work (12)</button>
+          <button class="cat-btn" data-cat="sanyukt">Sanyukt Internship Deliverables (3)</button>
+          <button class="cat-btn" data-cat="audit">Business Intelligence &amp; Audits (3)</button>
+          <button class="cat-btn" data-cat="social">Social &amp; Campaign Strategy (2)</button>
+          <button class="cat-btn" data-cat="editorial">Long-Form Editorial &amp; Books (2)</button>
+          <button class="cat-btn" data-cat="tech">AI, Web Demos &amp; Code Slides (2)</button>
+        </div>
+
+        <div id="grid" class="project-grid" aria-live="polite">
+          <!-- Populated dynamically from verified data object below -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. ABOUT PAGE (BIO, PROFICIENCY, HARDWARE/ENVIRONMENT SPECS, PROCESS)
+         ====================================================================== -->
+    <section class="section-block" id="about">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="section-eyebrow">6. About &amp; Technical Environment</span>
+            <h2 class="section-heading">Profile, Software Proficiency &amp; Process</h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Avatar, Bio & Environment Specs -->
+          <div class="avatar-card">
+            <div class="avatar-visual">PKS</div>
+            <h3 style="font-size:1.5rem; color:var(--text-white); font-weight:800;">Prince Kumar Sahu</h3>
+            <p style="color:var(--accent-primary); font-family:var(--font-mono); font-size:0.82rem; margin-bottom:1rem;">
+              Content Writer · Strategist · B.Tech CSE (AI &amp; ML)
+            </p>
+            <p style="font-size:0.93rem; color:var(--text-muted); margin-bottom:1.25rem;">
+              Based in Faridabad, Haryana, India. I bridge analytical computer science foundations with persuasive editorial craft—auditing claims with spreadsheet precision and writing copy that moves readers to act.
+            </p>
+
+            <h4 id="spec" style="font-family:var(--font-mono); font-size:0.76rem; text-transform:uppercase; color:var(--accent-secondary); letter-spacing:0.08em;">
+              Verified Environment &amp; Specs
+            </h4>
+            <ul class="spec-list">
+              <li>
+                <span class="spec-key">University</span>
+                <span class="spec-val">Manav Rachna University, Faridabad</span>
+              </li>
+              <li>
+                <span class="spec-key">Degree</span>
+                <span class="spec-val">B.Tech CSE (AI &amp; ML) · 2026–2030 (1st Sem)</span>
+              </li>
+              <li>
+                <span class="spec-key">Certified Training</span>
+                <span class="spec-val">Sanyukt (1-Month Content Intern)</span>
+              </li>
+              <li>
+                <span class="spec-key">Code &amp; Automation Stack</span>
+                <span class="spec-val">Python, HTML5/CSS3, JS, pptxgenjs, Gmail API</span>
+              </li>
+              <li>
+                <span class="spec-key">Ad &amp; CRO Standards</span>
+                <span class="spec-val">Meta Ads, Google Ads, GA4 &amp; Heuristic CRO</span>
+              </li>
+              <li>
+                <span class="spec-key">Currently Exploring</span>
+                <span class="spec-val">AI/ML Workflows, Programmatic Decks, CRO</span>
+              </li>
+              <li>
+                <span class="spec-key">Available For</span>
+                <span class="spec-val" style="color:var(--accent-primary);">Internships · Freelance · Collaborations</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Software Proficiency & 4-Step Pipeline -->
+          <div>
+            <div class="proficiency-card">
+              <h3 style="font-size:1.15rem; color:var(--text-white); margin-bottom:1.1rem;">
+                Software &amp; Discipline Proficiency
+              </h3>
+
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-top">
+                  <span>Long-Form Editorial, Book &amp; Article Writing</span>
+                  <span style="color:var(--accent-primary); font-family:var(--font-mono);">95%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" style="width:95%;"></div></div>
+              </div>
+
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-top">
+                  <span>Numerical Fact-Checking &amp; Claim Auditing (boAt Framework)</span>
+                  <span style="color:var(--accent-primary); font-family:var(--font-mono);">92%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" style="width:92%;"></div></div>
+              </div>
+
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-top">
+                  <span>Social Media Architecture (Carousels, Polls, Hashtags, Captions)</span>
+                  <span style="color:var(--accent-primary); font-family:var(--font-mono);">90%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" style="width:90%;"></div></div>
+              </div>
+
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-top">
+                  <span>Landing Page CRO &amp; Performance Ad Critique (Meta/Google)</span>
+                  <span style="color:var(--accent-primary); font-family:var(--font-mono);">88%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" style="width:88%;"></div></div>
+              </div>
+
+              <div class="skill-bar-wrap" style="margin-bottom:0;">
+                <div class="skill-bar-top">
+                  <span>Frontend Web Demos (HTML/CSS) &amp; Code Slides (pptxgenjs / Python)</span>
+                  <span style="color:var(--accent-primary); font-family:var(--font-mono);">84%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" style="width:84%;"></div></div>
+              </div>
+            </div>
+
+            <!-- 4-Step Production Pipeline -->
+            <div class="proficiency-card" style="margin-bottom:0;">
+              <h3 style="font-size:1.15rem; color:var(--text-white); margin-bottom:0.9rem;">
+                Production Pipeline (From Wireframe to Final Deliverable)
+              </h3>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div style="padding:0.95rem; background:var(--bg-void); border-radius:var(--radius-md); border:1px solid var(--border-dim);">
+                  <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--accent-primary);">01. WIREFRAME PASS</div>
+                  <div style="font-weight:700; color:var(--text-white); margin:0.25rem 0;">Research &amp; Claim Register</div>
+                  <p style="font-size:0.82rem; color:var(--text-muted);">Diagnose audience intent, extract primary data, and map structural hierarchy.</p>
+                </div>
+                <div style="padding:0.95rem; background:var(--bg-void); border-radius:var(--radius-md); border:1px solid var(--border-dim);">
+                  <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--accent-secondary);">02. CLAY PASS</div>
+                  <div style="font-weight:700; color:var(--text-white); margin:0.25rem 0;">First Draft &amp; Hook Design</div>
+                  <p style="font-size:0.82rem; color:var(--text-muted);">Write plain-English headlines, single-job page flows, and thumb-stopping openings.</p>
+                </div>
+                <div style="padding:0.95rem; background:var(--bg-void); border-radius:var(--radius-md); border:1px solid var(--border-dim);">
+                  <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--accent-amber);">03. LIGHTING &amp; AUDIT PASS</div>
+                  <div style="font-weight:700; color:var(--text-white); margin:0.25rem 0;">Fact-Check &amp; Friction Cut</div>
+                  <p style="font-size:0.82rem; color:var(--text-muted);">Recalculate every metric, cut 80% of fluff, and flag any unverified secondary claims.</p>
+                </div>
+                <div style="padding:0.95rem; background:var(--bg-void); border-radius:var(--radius-md); border:1px solid var(--border-dim);">
+                  <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--accent-tertiary);">04. FINAL RENDER</div>
+                  <div style="font-weight:700; color:var(--text-white); margin:0.25rem 0;">Multi-Channel Deployment</div>
+                  <p style="font-size:0.82rem; color:var(--text-muted);">Ship publication-ready copy with clear KPIs (Saves, Shares, CTR, or Bookings).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. RESOURCES, FREE TEMPLATES & TUTORIAL ARTICLES
+         ====================================================================== -->
+    <section class="section-block" id="resource">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="section-eyebrow">7. Community Resources, Templates &amp; Guides</span>
+            <h2 class="section-heading">Free Copy Templates &amp; Conversion Playbooks</h2>
+          </div>
+          <p style="font-size:0.9rem; color:var(--text-muted); max-width:32rem;">
+            Directly extracted from my uploaded `.docx` work files—ready to copy or download for your own team.
+          </p>
+        </div>
+
+        <div class="resources-grid">
+          <!-- Resource 1: NGO / CSR Collaboration Template (from $RB6D8YO.docx / task 8.docx) -->
+          <div class="resource-card">
+            <div>
+              <span class="badge badge-verified">Free Email Template · Task 8.docx</span>
+              <h3 style="font-size:1.25rem; color:var(--text-white); margin:0.75rem 0 0.5rem;">
+                B2B / CSR Organization Collaboration Pitch
+              </h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.25rem;">
+                Structured outreach invitation template for non-profits, student bodies, and brands proposing joint CSR workshops or community initiatives.
+              </p>
+            </div>
+            <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+              <button class="btn btn-ghost" style="padding:0.5rem 1rem; font-size:0.8rem;" onclick="openProjectModal('sanyukt-outreach')">
+                Inspect Template
+              </button>
+              <button class="btn btn-primary" style="padding:0.5rem 1rem; font-size:0.8rem;" onclick="copyResource('csr')">
+                📋 Copy Template
+              </button>
+            </div>
+          </div>
+
+          <!-- Resource 2: 3 Formal Certificate Templates (from task 6.docx) -->
+          <div class="resource-card">
+            <div>
+              <span class="badge badge-verified">HR / Event Resource · Task 6.docx</span>
+              <h3 style="font-size:1.25rem; color:var(--text-white); margin:0.75rem 0 0.5rem;">
+                3 Official Certificate Copy Frameworks
+              </h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.25rem;">
+                Ready-to-use formal wording for Certificate of Internship, Certificate of Volunteering Appreciation, and Certificate of Leadership Excellence.
+              </p>
+            </div>
+            <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+              <button class="btn btn-ghost" style="padding:0.5rem 1rem; font-size:0.8rem;" onclick="openProjectModal('sanyukt-certificates')">
+                Inspect All 3
+              </button>
+              <button class="btn btn-primary" style="padding:0.5rem 1rem; font-size:0.8rem;" onclick="copyResource('certs')">
+                📋 Copy Wording
+              </button>
+            </div>
+          </div>
+
+          <!-- Resource 3: 5-Minute Homepage CRO Guide -->
+          <div class="resource-card">
+            <div>
+              <span class="badge badge-concept">Editorial Guide · UX Copy</span>
+              <h3 style="font-size:1.25rem; color:var(--text-white); margin:0.75rem 0 0.5rem;">
+                "Make Your Website Easier to Act On"
+              </h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.25rem;">
+                My complete 5-principle guide for small business owners on eliminating silent conversion leaks, vague buttons, and competing CTAs.
+              </p>
+            </div>
+            <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+              <button class="btn btn-ghost" style="padding:0.5rem 1rem; font-size:0.8rem;" onclick="openProjectModal('website-article')">
+                Read Full Article
+              </button>
+              <button class="btn btn-primary" style="padding:0.5rem 1rem; font-size:0.8rem;" onclick="copyResource('article')">
+                📋 Copy Checklist
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="sample">
+      <div class="container sample-panel">
+        <div><span class="section-eyebrow">Writing sample &middot; UX &amp; CRO editorial</span>
+          <h2 class="section-heading">Make the next step obvious.</h2></div>
+        <blockquote>&ldquo;If a stranger scanning your headline and first button can&rsquo;t tell what to do next, you have a copy problem.&rdquo;</blockquote>
+        <p class="sample-note">From &ldquo;Make Your Website Easier to Act On,&rdquo; a practical guide on clear headlines, focused page goals, and specific calls to action.</p>
+        <button class="btn btn-ghost" type="button" onclick="openProjectModal('website-article')">Read the full article <span aria-hidden="true">&rarr;</span></button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. CONTACT SECTION (EMAIL, SOCIALS, COMMISSION STATUS, CV SUMMARY)
+         ====================================================================== -->
+    <section class="section-block" id="contact" style="border-bottom:none;">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <span class="section-eyebrow">8. Direct Contact &amp; Inquiries</span>
+            <h2 style="font-size:clamp(2rem, 3.6vw, 2.85rem); font-weight:850; color:var(--text-white); line-height:1.12; margin-bottom:1rem;">
+              Let's build clear, verifiable content that performs.
+            </h2>
+            <p style="font-size:1rem; color:var(--text-muted); margin-bottom:1.75rem;">
+              Reach out directly for content writing internships, freelance editorial projects, landing-page CRO teardowns, or research intelligence briefs.
+            </p>
+
+            <div style="display:flex; flex-wrap:wrap; gap:0.85rem; margin-bottom:1.75rem;">
+              <a href="mailto:p4426173@gmail.com?subject=Portfolio%20Inquiry%20-%20Prince%20Kumar%20Sahu" class="btn btn-primary">
+                <span>✉️ Email: p4426173@gmail.com</span>
+              </a>
+              <button type="button" class="btn btn-ghost" onclick="copyEmail()">
+                <span>📋 Copy Email</span>
+              </button>
+              <button type="button" class="btn btn-ghost" onclick="downloadVerifiedSummary()">
+                <span>⬇ Download Verified CV &amp; Portfolio Spec (.txt)</span>
+              </button>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:1.5rem; font-size:0.9rem;">
+              <a href="https://linkedin.com/in/prince-sahu-3b3876399" target="_blank" rel="noopener noreferrer" style="color:var(--accent-secondary); text-decoration:none; font-weight:700;">
+                ↗ LinkedIn: /in/prince-sahu-3b3876399
+              </a>
+              <a href="https://github.com/Pr59504" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary); text-decoration:none; font-weight:700;">
+                ↗ GitHub: @Pr59504
+              </a>
+              <span style="color:var(--text-dim);">📍 Faridabad, Haryana, India</span>
+            </div>
+          </div>
+
+          <div class="commission-box">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+              <span style="font-family:var(--font-mono); font-size:0.76rem; text-transform:uppercase; color:var(--accent-primary);">Commission &amp; Role Status</span>
+              <span class="status-pill"><span class="pulse-dot"></span> OPEN</span>
+            </div>
+            <ul class="spec-list" style="margin-top:0;">
+              <li>
+                <span class="spec-key">Content Internships</span>
+                <span class="spec-val" style="color:var(--accent-primary);">Available Immediately</span>
+              </li>
+              <li>
+                <span class="spec-key">Freelance Articles &amp; Copy</span>
+                <span class="spec-val">Open (Per-Project / Retainer)</span>
+              </li>
+              <li>
+                <span class="spec-key">Research &amp; Claim Audits</span>
+                <span class="spec-val">Open (4-Page Briefs &amp; Fact-Checks)</span>
+              </li>
+              <li>
+                <span class="spec-key">Landing Page CRO Audits</span>
+                <span class="spec-val">Open (Heuristic Teardowns)</span>
+              </li>
+              <li style="border-bottom:none; padding-bottom:0;">
+                <span class="spec-key">Rate Card / Quote</span>
+                <span class="spec-val">Custom per scope via Email</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>Prince Kumar Sahu</strong> · Content Writer, Strategist &amp; B.Tech CSE (AI &amp; ML) Student · 100% Verified Portfolio Data (No Fabricated Metrics) · © 2026
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       2. SHOWREEL MODAL (INTERACTIVE AUTOPLAY PORTFOLIO REEL)
+       ======================================================================== -->
+  <dialog class="recruiter-dialog" id="recruiter-brief" aria-labelledby="recruiter-title">
+    <div class="recruiter-dialog-inner">
+      <button type="button" class="modal-close" data-close-recruiter aria-label="Close recruiter brief">&#10005;</button>
+      <span class="section-eyebrow">Recruiter quick read</span>
+      <h2 id="recruiter-title">Prince Kumar Sahu</h2>
+      <p class="recruiter-role">Content Writer &amp; Strategist &middot; B.Tech CSE (AI &amp; ML) student</p>
+      <p class="recruiter-intro">I combine editorial writing, campaign thinking, and structured research. This portfolio includes certified internship deliverables, independent audits, concept work, and technical builds.</p>
+      <div class="recruiter-facts">
+        <div><span>EDUCATION</span><strong>B.Tech CSE (AI &amp; ML), Manav Rachna University<br>2026&ndash;2030 &middot; First semester</strong></div>
+        <div><span>EXPERIENCE</span><strong>One-month certified content internship / trainee engagement at Sanyukt</strong></div>
+        <div><span>WORKING AREAS</span><strong>Editorial &middot; Content strategy &middot; Fact-checking &middot; CRO &middot; Social campaigns &middot; Web demos</strong></div>
+      </div>
+      <h3>Selected evidence</h3>
+      <div class="recruiter-proof-list">
+        <button type="button" data-recruiter-project="boat-audit"><strong>boAt report audit</strong><span>33 claims reviewed &middot; 23 metrics recalculated &middot; 5 secondary claims flagged</span></button>
+        <button type="button" data-recruiter-project="campaign-review"><strong>Performance marketing review</strong><span>19 issues identified &middot; 11 concrete fixes proposed</span></button>
+        <button type="button" data-recruiter-project="ai-book"><strong>AI productivity manuscript</strong><span>12 chapters &middot; 8 appendices &middot; approximately 14,500 words</span></button>
+      </div>
+      <div class="recruiter-actions">
+        <a class="btn btn-primary" href="mailto:p4426173@gmail.com?subject=Portfolio%20Inquiry%20-%20Prince%20Kumar%20Sahu">Email Prince</a>
+        <button class="btn btn-ghost" type="button" onclick="downloadVerifiedSummary()">Download portfolio summary</button>
+        <a class="btn btn-ghost" href="#contact" data-close-recruiter>Contact details</a>
+      </div>
+      <p class="recruiter-location">Faridabad, Haryana, India &middot; Open to internships, freelance work, and collaborations</p>
+    </div>
+  </dialog>
+
+  <div class="modal-backdrop" id="showreel-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeShowreelModal()" aria-label="Close Showreel">✕</button>
+      <span class="section-eyebrow">2. Interactive Showreel Player (Autoplay Active)</span>
+      <h3 style="font-size:1.65rem; color:var(--text-white); font-weight:800;">
+        Featured Portfolio Reel — Prince Kumar Sahu (2026)
+      </h3>
+
+      <div class="reel-screen">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-secondary);">
+          <span id="reel-scene-counter">SCENE 01 / 05 · RESEARCH &amp; FACT-CHECKING</span>
+          <span id="reel-timer-badge">AUTOPLAY: ON (5s/scene)</span>
+        </div>
+
+        <div style="my:auto; padding:1.5rem 0;">
+          <h4 id="reel-scene-title" style="font-size:clamp(1.45rem, 2.8vw, 2.1rem); color:var(--text-white); font-weight:850; margin-bottom:0.65rem;">
+            boAt Strategic Intelligence Report &amp; 33-Claim Numerical Audit
+          </h4>
+          <p id="reel-scene-desc" style="font-size:1rem; color:var(--text-muted); max-width:44rem;">
+            Recalculated 23 financial growth rates, channel shares, and PBT bridges across FY23–FY26. Confirmed ₹84.5 Cr PAT (+38.3%) while flagging 5 unverified secondary claims.
+          </p>
+        </div>
+
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
+            <div style="display:flex; gap:0.5rem;">
+              <button class="btn btn-ghost" style="padding:0.4rem 0.9rem; font-size:0.8rem;" onclick="StepReel(-1)">← Prev</button>
+              <button class="btn btn-primary" style="padding:0.4rem 0.95rem; font-size:0.8rem;" id="reel-play-pause" onclick="toggleReelAutoplay()">⏸ Pause Autoplay</button>
+              <button class="btn btn-ghost" style="padding:0.4rem 0.9rem; font-size:0.8rem;" onclick="StepReel(1)">Next →</button>
+            </div>
+            <button class="btn btn-reel" style="padding:0.4rem 1rem; font-size:0.8rem;" id="reel-inspect-btn" onclick="inspectCurrentReelProject()">
+              Open Full Project Breakdown →
+            </button>
+          </div>
+          <div class="reel-progress-bar">
+            <div class="reel-progress-fill" id="reel-progress-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <h4 style="font-family:var(--font-mono); font-size:0.78rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.75rem;">
+        Projects Featured in This Showreel (Click to Jump):
+      </h4>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:0.6rem;" id="reel-playlist">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       5. PROJECT PAGE TEMPLATE MODAL (HERO, METADATA, WIP PASSES, FINAL GALLERY)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog" id="project-modal-body">
+      <!-- Populated dynamically when a user clicks any project card -->
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard!</div>
+
+  <!-- ========================================================================
+       JAVASCRIPT ENGINE (3D CANVAS, VERIFIED DATA STORE, MODALS & FILTERS)
+       ======================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ----------------------------------------------------------------------
+         A. INTERACTIVE 3D WEBGL-STYLE PARTICLE & WIREFRAME ENGINE (HERO)
+         ---------------------------------------------------------------------- */
+      const canvas = document.getElementById('webgl-canvas');
+      const ctx = canvas.getContext('2d');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let heroVisible = true;
+      let frameId = 0;
+      let width, height;
+      let particles = [];
+      let mouse = { x: 0, y: 0, active: false };
+
+      function resizeCanvas() {
+        width = canvas.width = canvas.parentElement.offsetWidth;
+        height = canvas.height = canvas.parentElement.offsetHeight;
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      // Create 3D nodes representing research, copy, strategy, and AI nodes
+      const nodeCount = 58;
+      for (let i = 0; i < nodeCount; i++) {
+        particles.push({
+          x: (Math.random() - 0.5) * width * 1.2,
+          y: (Math.random() - 0.5) * height * 1.2,
+          z: Math.random() * 400 + 100,
+          vx: (Math.random() - 0.5) * 0.45,
+          vy: (Math.random() - 0.5) * 0.45,
+          vz: (Math.random() - 0.5) * 0.6,
+          radius: Math.random() * 2.2 + 1.2
+        });
+      }
+
+      canvas.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left - width / 2;
+        mouse.y = e.clientY - rect.top - height / 2;
+        mouse.active = true;
+      });
+
+      function animate3D() {
+        if (reduceMotion || !heroVisible) return;
+        ctx.clearRect(0, 0, width, height);
+        const cx = width / 2;
+        const cy = height / 2;
+        const fov = 320;
+
+        const projected = [];
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.z += p.vz;
+
+          if (mouse.active) {
+            p.x += (mouse.x * 0.08 - p.x) * 0.002;
+            p.y += (mouse.y * 0.08 - p.y) * 0.002;
+          }
+
+          if (p.z < 60) p.z = 480;
+          if (p.z > 480) p.z = 60;
+          if (p.x > width) p.x = -width;
+          if (p.x < -width) p.x = width;
+          if (p.y > height) p.y = -height;
+          if (p.y < -height) p.y = height;
+
+          const scale = fov / (fov + p.z);
+          const sx = cx + p.x * scale;
+          const sy = cy + p.y * scale;
+          projected.push({ sx, sy, scale, z: p.z, r: p.radius * scale });
+        }
+
+        // Draw 3D wireframe connections
+        for (let i = 0; i < projected.length; i++) {
+          for (let j = i + 1; j < projected.length; j++) {
+            const dx = projected[i].sx - projected[j].sx;
+            const dy = projected[i].sy - projected[j].sy;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 135) {
+              const alpha = (1 - dist / 135) * 0.22;
+              ctx.strokeStyle = `rgba(139, 92, 246, ${alpha})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(projected[i].sx, projected[i].sy);
+              ctx.lineTo(projected[j].sx, projected[j].sy);
+              ctx.stroke();
+            }
+          }
+        }
+
+        // Draw nodes
+        for (let i = 0; i < projected.length; i++) {
+          const n = projected[i];
+          ctx.fillStyle = i % 3 === 0 ? '#8B5CF6' : '#22D3EE';
+          ctx.beginPath();
+          ctx.arc(n.sx, n.sy, Math.max(1.2, n.r), 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        frameId = requestAnimationFrame(animate3D);
+      }
+      const heroObserver = new IntersectionObserver(([entry]) => { heroVisible = entry.isIntersecting; if (heroVisible && !reduceMotion) cancelAnimationFrame(frameId), frameId = requestAnimationFrame(animate3D); }, { threshold: 0.02 });
+      heroObserver.observe(document.getElementById('hero'));
+      animate3D();
+
+      /* ----------------------------------------------------------------------
+         B. HERO LIVE RENDER PASS SWITCHER
+         ---------------------------------------------------------------------- */
+      const heroPasses = {
+        restaurant: {
+          before: '"Click here in order to submit your inquiry for our reservation consideration"',
+          beforeNote: '11 words, passive voice, leaves hungry mobile diners uncertain if a table is booked.',
+          after: '"Book a table for tonight"',
+          afterNote: '5 words, zero cognitive friction, answers immediate intent on mobile viewports.'
+        },
+        boat: {
+          before: '"boAt cut marketing spend sharply across FY26 while audio shrunk 10%."',
+          beforeNote: 'Unaudited draft claim: Conflates Q1 (-34.5%) with full-year (~-13% derived) and relies on 1 secondary source.',
+          after: '"Marketing fell 34.5% in Q1 FY26 (~13% full-year derived); FY25 audio grew +5.2%."',
+          afterNote: 'Audited statement from boAt-Report-Audit.docx: Distinguishes verified filing numbers from secondary estimates.'
+        },
+        campaign: {
+          before: '"Run a 9-minute 43-second 16:9 720p video across Meta Reels & TikTok with 4 simultaneous objectives."',
+          beforeNote: 'From raw ADVERTISING_STRATEGY_PLAN.docx & UNIQLO_Video.mp4: Disqualified by 60s 9:16 vertical limits.',
+          after: '"Cut 15s & 30s 9:16 vertical edits (1080p), add burned-in captions, and lock 1 primary conversion event."',
+          afterNote: 'From Performance Marketing Campaign Analysis Report ($RBOUCQZ.docx): Actionable launch fix.'
+        }
+      };
+
+      const passSelect = document.getElementById('hero-pass-select');
+      const passBeforeText = document.getElementById('pass-before-text');
+      const passBeforeNote = document.getElementById('pass-before-note');
+      const passAfterText = document.getElementById('pass-after-text');
+      const passAfterNote = document.getElementById('pass-after-note');
+      const cyclePassBtn = document.getElementById('cycle-pass-btn');
+      const passKeys = ['restaurant', 'boat', 'campaign'];
+      let passIdx = 0;
+
+      function setHeroPass(key) {
+        const d = heroPasses[key];
+        if (!d) return;
+        passBeforeText.textContent = d.before;
+        passBeforeNote.textContent = d.beforeNote;
+        passAfterText.textContent = d.after;
+        passAfterNote.textContent = d.afterNote;
+        passSelect.value = key;
+      }
+
+      passSelect.addEventListener('change', (e) => setHeroPass(e.target.value));
+      cyclePassBtn.addEventListener('click', () => {
+        passIdx = (passIdx + 1) % passKeys.length;
+        setHeroPass(passKeys[passIdx]);
+      });
+
+      /* ----------------------------------------------------------------------
+         C. 100% VERIFIED PROJECT DATABASE (FROM HTML + ALL 9 DOCX FILES)
+         ---------------------------------------------------------------------- */
+      const projects = [
+        {
+          id: 'boat-audit',
+          title: 'boAt Strategic Report Audit (33 Claims & 23 Metrics)',
+          year: 'Oct 2026',
+          client: 'Self-Directed Analytical Audit (boAt / Imagine Marketing Ltd)',
+          categoryKey: 'audit',
+          categoryLabel: 'Business Intelligence & Audits',
+          badgeClass: 'badge-personal',
+          badgeText: 'Verified Docx Deliverable',
+          tools: ['Word / DOCX', 'Financial Ratio Audit', 'Source Triangulation', 'PBT Bridge Math'],
+          role: 'Lead Auditor · Numerical Verification · Risk Classification',
+          livePreview: 'ΔPBT = +₹39.6 Cr | Finance (-₹20.0 Cr) + Warranty (-₹25.1 Cr) = ₹45.1 Cr savings',
+          overview: 'Extracted 33 material claims and recalculated 23 financial growth rates, shares, and profit bridges from my 4-page boAt Strategic Intelligence Report. Confirmed all headline figures while flagging 5 unverified secondary claims and 3 High-severity context gaps.',
+          conceptRef: 'Audited "boAt (Imagine Marketing Ltd): Strategic Intelligence Report" (4 pages) against press coverage of UDRHP filings (Inc42, Business Standard, Outlook Business, Storyboard18, IPO Central).',
+          wireframePass: `
+            <h4>1. Wireframe Pass — Claim Extraction & Rating Matrix</h4>
+            <p>Extracted 33 distinct claims across FY23–FY26 and established a strict verification convention:</p>
+            <ul>
+              <li><strong>Verified (11 items):</strong> Calculations reproduced from stated inputs or facts consistent across independent sources.</li>
+              <li><strong>Verified with Discrepancy (7 items):</strong> Minor rounding or restatement differences across filings (e.g., FY25 revenue ₹3,073.3 Cr consolidated vs ₹3,070.38 Cr mix base).</li>
+              <li><strong>Partially Verified (9 items):</strong> Company-reported figures repeated by multiple outlets where primary filing PDF was not opened.</li>
+              <li><strong>Unverified (5 items):</strong> Claims resting on a single secondary source (e.g., Planify/UnlistedZone).</li>
+              <li><strong>Not Applicable (1 item):</strong> Strategic opinion/recommendations.</li>
+            </ul>
+          `,
+          clayPass: `
+            <h4>2. Clay Pass — 23 Recalculated Financial Formulas (₹ Crore)</h4>
+            <table>
+              <thead>
+                <tr><th>#</th><th>Metric</th><th>Formula & Inputs</th><th>Recalculated</th><th>Report Said</th><th>Check</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Rev Growth FY24</td><td>(3,117.7 − 3,376.8) / 3,376.8</td><td>−7.67%</td><td>−7.7%</td><td>Matches</td></tr>
+                <tr><td>2</td><td>Rev Growth FY25</td><td>(3,073.3 − 3,117.7) / 3,117.7</td><td>−1.42%</td><td>−1.4%</td><td>Matches</td></tr>
+                <tr><td>3</td><td>Rev Growth FY26</td><td>(2,931 − 3,073.3) / 3,073.3</td><td>−4.63%</td><td>−4.6%</td><td>Matches</td></tr>
+                <tr><td>5</td><td>PAT Growth FY26</td><td>(84.5 − 61.1) / 61.1</td><td>+38.3%</td><td>+38%</td><td>Matches</td></tr>
+                <tr><td>7</td><td>Finance Cost Change</td><td>(7.9 − 27.9) / 27.9</td><td>−71.7%</td><td>−72%</td><td>Matches</td></tr>
+                <tr><td>8</td><td>Audio Share FY25</td><td>2,586.04 / 3,070.38</td><td>84.23%</td><td>84.2%</td><td>Matches</td></tr>
+                <tr><td>15</td><td>Q1 FY26 Ad Spend</td><td>(53 − 81) / 81</td><td>−34.6%</td><td>−34.5%</td><td>Matches</td></tr>
+                <tr><td>18</td><td>PBT Cost Bridge</td><td>ΔPBT = 39.6; Fin (20.0) + Warr (25.08)</td><td>45.1 > 39.6</td><td>Cost-led</td><td>Verified</td></tr>
+                <tr><td>20</td><td>Wearables FY23–25</td><td>(330.41 − 901.5) / 901.5</td><td>−63.4%</td><td>Omitted</td><td>Flagged High</td></tr>
+              </tbody>
+            </table>
+          `,
+          lightingPass: `
+            <h4>3. Audit & Risk Pass — Severity Register (0 Critical, 3 High, 7 Medium, 3 Low)</h4>
+            <ul>
+              <li><strong>HIGH (F1 — Audio Decline Unverified):</strong> Claim that audio fell −10% in FY26 rests on one secondary source; FY25 audio actually grew +5.2% (₹2,459.2 Cr to ₹2,586.0 Cr).</li>
+              <li><strong>HIGH (F2 — Customer Concentration Unverified):</strong> Claim that 2 customers = ~58% of FY26 sales (₹1,692 Cr / ₹2,928.08 Cr = 57.8%) rests on one secondary analysis.</li>
+              <li><strong>HIGH (F3 — Omitted Context):</strong> Wearables turned a ₹7 Cr profit only after revenue fell −63.4% (₹901.5 Cr in FY23 to ₹330.41 Cr in FY25), and international fell −88.7% in FY24 (₹122.6 Cr to ₹13.8 Cr).</li>
+              <li><strong>MEDIUM (F4 & F5):</strong> Full-year marketing cut was ~12.8% (derived), not as sharp as Q1 (−34.5%); FY23 net loss of ₹129.4 Cr was left as "n/a".</li>
+            </ul>
+          `,
+          finalPass: `
+            <h4>4. Final Deliverable — Corrected Statements Table (boAt-Report-Audit.docx)</h4>
+            <table>
+              <thead>
+                <tr><th>Original Report Statement</th><th>Audited & Corrected Statement</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Marketing spend was cut sharply</td><td>Marketing fell sharply in Q1 FY26 (−34.5%) and by roughly 13% for the full year (derived); remains ~11.6% of revenue.</td></tr>
+                <tr><td>Audio is shrinking (FY26 −10%)</td><td>Audio grew 5.2% in FY25; a reported 10% fall in FY26 comes from one secondary analysis and is unverified.</td></tr>
+                <tr><td>Wearables has turned profitable</td><td>Wearables reached a small segment profit (~₹7 Cr) after revenue fell ~63% from FY23 to FY25.</td></tr>
+                <tr><td>International revenue more than doubled</td><td>Company reports ₹20 Cr to ₹45 Cr (+125%), still well below FY23's ₹122.6 Cr and ~1.54% of total revenue.</td></tr>
+                <tr><td>Net profit FY23: n/a</td><td>FY23 net loss was ~₹129.4 Cr (boAt's first loss year).</td></tr>
+              </tbody>
+            </table>
+          `
+        },
+        {
+          id: 'campaign-review',
+          title: 'Performance Marketing Campaign Analysis (19 Issues, 11 Fixes)',
+          year: 'June 2026',
+          client: 'Concept Audit Sample (ADVERTISING_STRATEGY_PLAN.docx + UNIQLO_Video.mp4)',
+          categoryKey: 'audit',
+          categoryLabel: 'Business Intelligence & Audits',
+          badgeClass: 'badge-concept',
+          badgeText: '2-File Docx Deliverable',
+          tools: ['Google Ads Standards', 'Meta Ads Manager', 'GA4 / Pixel Spec', 'Video Creative Teardown'],
+          role: 'Performance Marketing Auditor · Strategy & Creative Critique',
+          livePreview: '19 Total Issues (14 HIGH Severity) | Verdict: Strategy Template & 9:43 Video Not Ready',
+          overview: 'A comprehensive 2-part teardown evaluating a raw written advertising plan ($RDDP287.docx) and a 9-minute 43-second influencer video against real-world Meta Ads, TikTok, and Google Ads execution standards ($RBOUCQZ.docx).',
+          conceptRef: 'Compares raw input file ADVERTISING_STRATEGY_PLAN.docx ($100k–$200k range, 4 conflicting objectives) and UNIQLO_Video.mp4 (9:43 duration, 1280x720, 16:9) against paid media deployment rules.',
+          wireframePass: `
+            <h4>1. Raw Input Asset Examined (ADVERTISING_STRATEGY_PLAN.docx / $RDDP287.docx)</h4>
+            <p>The submitted strategy plan proposed:</p>
+            <ul>
+              <li><strong>4 Simultaneous Objectives:</strong> Brand Awareness, Boost Sales, Drive Website Traffic, and Increase Engagement with no hierarchy.</li>
+              <li><strong>Placeholder Target Audience:</strong> Age 18–45, Male & Female, "Major cities", Interests: "Technology, fashion, travel, health, sports, etc."</li>
+              <li><strong>Unfixed Budget ($100,000 – $200,000):</strong> Social Media 40–50% ($40k–$80k FB/IG, $20k–$40k TikTok, $10k–$30k Influencers), Google Ads 30–40% ($30k–$50k Search, $20k–$40k Display), Email 5–10% ($5k–$15k), Video 10–15% ($10k–$30k).</li>
+              <li><strong>Unbenchmarked Targets:</strong> "1–2M new users, 30–50% sales increase, 40–60% traffic growth" over 2–3 months with zero baseline metrics.</li>
+            </ul>
+          `,
+          clayPass: `
+            <h4>2. Part 1 Audit — 11 Strategy Issues Identified ($RBOUCQZ.docx)</h4>
+            <ul>
+              <li><strong>#1 [HIGH]:</strong> No product, brand, or industry defined anywhere in the document.</li>
+              <li><strong>#2 [HIGH]:</strong> 4 simultaneous conflicting objectives cause algorithmic dilution across Meta/Google.</li>
+              <li><strong>#3 [HIGH]:</strong> Interest stack covers 5 unrelated verticals (~1.8B users).</li>
+              <li><strong>#4 [HIGH]:</strong> $100k gap between min/max budget prevents daily pacing calculations.</li>
+              <li><strong>#5 [HIGH]:</strong> $30k–$50k allocated to Google Search with zero keyword lists, match types, or negative keywords.</li>
+              <li><strong>#6 [HIGH]:</strong> Zero conversion tracking (Meta Pixel / GA4 events) specified prior to spend activation.</li>
+              <li><strong>#7 [HIGH]:</strong> Zero retargeting/remarketing layer (loses 3–5x ROAS efficiency).</li>
+              <li><strong>#8–#11 [MED/LOW]:</strong> Unjustified LinkedIn B2B/B2C mix, unvetted influencer spend, unbenchmarked KPIs, and undefined A/B test math.</li>
+            </ul>
+          `,
+          lightingPass: `
+            <h4>3. Part 2 Audit — Video Asset Analysis (UNIQLO_Video.mp4 · 9:43, 720p, 16:9)</h4>
+            <table>
+              <thead>
+                <tr><th>Platform</th><th>Max Duration</th><th>Required AR</th><th>Min Res</th><th>Compatible?</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Meta Reels / Stories</td><td>60s / 15s</td><td>9:16</td><td>1080p</td><td>NO</td></tr>
+                <tr><td>Meta Feed (Video)</td><td>240 min</td><td>4:5 or 1:1</td><td>1080p</td><td>PARTIAL</td></tr>
+                <tr><td>TikTok Ads</td><td>60s</td><td>9:16</td><td>1080p</td><td>NO</td></tr>
+                <tr><td>YouTube In-Stream</td><td>No max</td><td>16:9</td><td>1080p rec.</td><td>PARTIAL</td></tr>
+                <tr><td>Google Display</td><td>30s</td><td>Multiple</td><td>300×250+</td><td>NO</td></tr>
+              </tbody>
+            </table>
+            <p><strong>8 Creative Blockers Found:</strong> 9:43 duration (0:00–1:00 talking head, 1:00–8:00 outfits, 8:00–9:43 wrap-up), 720p resolution, 16:9 landscape aspect ratio, no 3-second hook, no burned-in captions (85% watch muted), no CTA card, static apartment backdrop, and zero visible UNIQLO logo.</p>
+          `,
+          finalPass: `
+            <h4>4. Final Verdict & 11 Prioritized Fixes (6 Strategy + 5 Creative)</h4>
+            <ul>
+              <li><strong>Strategy Fixes:</strong> (1) Lock 1 primary objective; (2) Define 2–3 testable persona ad sets; (3) Verify Meta Pixel & GA4 events pre-launch; (4) Allocate 10–15% budget to 30-day retargeting; (5) Build exact/phrase/negative keyword lists; (6) Commit to a fixed total budget with daily caps.</li>
+              <li><strong>Creative Fixes:</strong> (1) Cut 15s & 30s edits around the high-contrast camel trench coat reveal; (2) Reframe to 9:16 vertical and 1:1 square; (3) Add word-by-word burned-in captions; (4) Redesign the 0–3s hook ("Built 9 outfits from UNIQLO. Here is what I found."); (5) Add a 3–5s closing CTA end-card with URL/code.</li>
+            </ul>
+          `
+        },
+        {
+          id: 'sanyukt-social',
+          title: 'Sanyukt Social Media Captions & Hashtag Bank',
+          year: '2026',
+          client: 'Sanyukt (1-Month Certified Content Writing Traineeship)',
+          categoryKey: 'sanyukt',
+          categoryLabel: 'Sanyukt Internship Deliverables',
+          badgeClass: 'badge-verified',
+          badgeText: 'Verified Internship Files',
+          tools: ['Instagram Copy', 'LinkedIn Copy', 'Community Hashtag Architecture'],
+          role: 'Content Writing Intern / Trainee',
+          livePreview: '3 Thematic Campaigns (Women Empowerment, Youth, Environment) + 10 Core Brand Tags',
+          overview: 'Actual social media caption sets and community hashtag taxonomy authored during my certified 1-month traineeship at Sanyukt (extracted verbatim from SOCIAL MEDIA CAPTION.docx and HASTAGS AND CAPTION.docx).',
+          conceptRef: 'Designed to pair with Sanyukt promotional posters across Instagram and LinkedIn, balancing emotional resonance with clear community calls to action.',
+          wireframePass: `
+            <h4>1. Wireframe Pass — 3 Core Social Pillars & Brand Tag Architecture</h4>
+            <p>Structured each social caption around a 3-part cadence: <strong>Opening Hook → 2-Sentence Narrative Expansion → Emoji Callout + Targeted Hashtag Cluster</strong>.</p>
+            <p><strong>Master Brand Hashtag Bank (from HASTAGS AND CAPTION.docx):</strong><br>
+            <code>#Sanyukt #TogetherWeGrow #UnityInAction #CommunityFirst #StrongerTogether #PositiveChange #SocialImpact #EmpowerCommunities #MakeADifference #BeTheChange</code></p>
+          `,
+          clayPass: `
+            <h4>2. Deliverable 1 — Topic: Women's Empowerment (SOCIAL MEDIA CAPTION.docx)</h4>
+            <p>"A woman who believes in herself becomes an inspiration for others to do the same.<br>
+            Every woman deserves the freedom to dream, grow, and lead. Because when women rise, entire generations rise with them.<br>
+            💜 Empower a woman. Empower the future."</p>
+            <p><code>#WomenEmpowerment #EmpowerWomen #GenderEquality #WomenInLeadership #Inspiration #GirlPower</code></p>
+          `,
+          lightingPass: `
+            <h4>3. Deliverable 2 — Topic: Youth Participation (SOCIAL MEDIA CAPTION.docx)</h4>
+            <p>"What happens when young people are given a seat at the table?<br>
+            New ideas emerge. Communities grow stronger. Change happens faster.<br>
+            From leading initiatives to solving real-world challenges, today's youth are proving that age is no barrier to making a difference.<br>
+            🌟 The future isn't waiting for young people—it's already being shaped by them."</p>
+            <p><code>#YouthParticipation #YouthLeadership #FutureLeaders #YouthVoice #YoungChangemakers #Leadership #PositiveImpact #SocialChange</code></p>
+          `,
+          finalPass: `
+            <h4>4. Deliverable 3 — Topic: Environment (SOCIAL MEDIA CAPTION.docx)</h4>
+            <p>"What we take from nature today will shape what future generations inherit tomorrow.<br>
+            The environment doesn't need us—we need it. Every small step towards protecting our planet is a step towards protecting our future.<br>
+            🌱 Care for nature, and nature will care for us."</p>
+            <p><code>#Environment #ClimateAction #Sustainability #SaveEarth #GoGreen #EcoFriendly</code></p>
+          `
+        },
+        {
+          id: 'sanyukt-polls',
+          title: 'Interactive Story Polls & Engagement Quiz Pack (Task 7)',
+          year: '2026',
+          client: 'Sanyukt Traineeship Task Deliverable (TASK 7.docx)',
+          categoryKey: 'sanyukt',
+          categoryLabel: 'Sanyukt Internship Deliverables',
+          badgeClass: 'badge-verified',
+          badgeText: 'Verified Docx Deliverable',
+          tools: ['Instagram Stories', 'Interactive Sticker Polls', 'Audience Retention Hooks'],
+          role: 'Content Writing Trainee · Social Engagement Design',
+          livePreview: '5 Interactive Formats: This-or-That, 80% Goal Quiz, AI Money Poll, 1-Word Reply, Curiosity Hook',
+          overview: 'Five low-friction Instagram/LinkedIn interactive story poll scripts designed to trigger tap-through engagement, DMs, and algorithmic story reach (from TASK 7.docx).',
+          conceptRef: 'Uses behavioral micro-commitments (binary taps, multiple-choice curiosity gaps, and single-word replies) around personal finance, goal-setting, and AI adoption.',
+          wireframePass: `
+            <h4>1. Wireframe Pass — 5 Psychological Engagement Mechanics</h4>
+            <ul>
+              <li><strong>Mechanic 1:</strong> Binary "This or That" (Instant impulse tap)</li>
+              <li><strong>Mechanic 2:</strong> 4-Option Prediction Quiz (Next-slide retention hook)</li>
+              <li><strong>Mechanic 3:</strong> Polarizing AI Opinion Poll (High tap-to-view ratio)</li>
+              <li><strong>Mechanic 4:</strong> 1-Word DM Reply Prompt (Boosts algorithmic relationship signal)</li>
+              <li><strong>Mechanic 5:</strong> Value-Proposition Curiosity Poll (Qualifies warm leads)</li>
+            </ul>
+          `,
+          clayPass: `
+            <h4>2. Polls 1 & 2 — Binary Choice & Prediction Quiz (TASK 7.docx)</h4>
+            <p><strong>1. This or That (Poll):</strong><br>
+            🚀 If you had ₹1 Crore today, what's your first move?<br>
+            🟢 Invest it &nbsp;|&nbsp; 🔵 Spend it</p>
+            <p><strong>2. Prediction Quiz:</strong><br>
+            🧠 Guess the Answer!<br>
+            What percentage of people quit their goals within the first year?<br>
+            A. 30% &nbsp;|&nbsp; B. 50% &nbsp;|&nbsp; C. 80% ✅ &nbsp;|&nbsp; D. 95%<br>
+            <em>(Reveal the answer in the next story with an explanation.)</em></p>
+          `,
+          lightingPass: `
+            <h4>3. Polls 3 & 4 — AI Trust Poll & 1-Word Reply Prompt (TASK 7.docx)</h4>
+            <p><strong>3. Opinion Poll:</strong><br>
+            Be honest... 👀<br>
+            Would you trust an AI to manage your money?<br>
+            🤖 Yes, absolutely &nbsp;|&nbsp; 🙅 Never</p>
+            <p><strong>4. Engagement Question:</strong><br>
+            What's the ONE thing stopping you from becoming financially free? 💸<br>
+            💬 Reply with one word.<br>
+            <em>(Examples: Salary, Fear, Knowledge, Discipline, Time)</em></p>
+          `,
+          finalPass: `
+            <h4>4. Poll 5 — High-Intent Curiosity Poll (TASK 7.docx)</h4>
+            <p><strong>5. Curiosity Poll:</strong><br>
+            If I showed you a legal way to earn an extra ₹50,000/month...<br>
+            🔥 I'd learn today &nbsp;|&nbsp; 😅 Sounds too good to be true</p>
+          `
+        },
+        {
+          id: 'sanyukt-outreach',
+          title: 'Institutional CSR Collaboration Pitch & Certificate Suite (Tasks 6 & 8)',
+          year: '2026',
+          client: 'Sanyukt Traineeship Deliverables (task 6.docx & task 8.docx / $RB6D8YO.docx)',
+          categoryKey: 'sanyukt',
+          categoryLabel: 'Sanyukt Internship Deliverables',
+          badgeClass: 'badge-verified',
+          badgeText: 'Verified Docx Deliverables',
+          tools: ['B2B Partnership Copy', 'CSR Proposal Framing', 'Official Certificate Copy'],
+          role: 'Content Writing Trainee · Institutional Communications',
+          livePreview: 'Full B2B Collaboration Invitation Email + 3 Formal Certificate Templates',
+          overview: 'Formal organizational communication templates authored during my Sanyukt traineeship: a customizable B2B/CSR partnership outreach email (task 8.docx / $RB6D8YO.docx) and three official recognition certificates for interns, volunteers, and leaders (task 6.docx).',
+          conceptRef: 'Engineered with modular bracketed variables so partner managers and HR leads can customize and deploy outreach or certificates in under 2 minutes.',
+          wireframePass: `
+            <h4>1. Wireframe Pass — Partnership Email Architecture (task 8.docx)</h4>
+            <p>Structured into 5 persuasive blocks: (1) Organization credential & mission introduction; (2) Quantified past impact proof; (3) Specific co-branded initiative & value-exchange matrix; (4) Low-friction proposal/call offer; (5) Warm sign-off.</p>
+          `,
+          clayPass: `
+            <h4>2. Full Collaboration Invitation Email (task 8.docx / $RB6D8YO.docx)</h4>
+            <p><strong>Subject:</strong> Invitation for Collaboration — [Your Organization Name] x [Recipient Organization Name]</p>
+            <p>Dear [Recipient Name / "Sir/Madam" / "Team [Organization Name]"],</p>
+            <p>I hope this email finds you well. I am writing on behalf of [Your Organization Name], a [brief description — e.g., "non-profit organization working in the field of education and youth empowerment"], to explore the possibility of a collaboration between our organizations.</p>
+            <p>Over the past [duration, e.g., "three years"], we have been actively working towards [brief mission/goal, e.g., "providing skill development opportunities to underserved communities"], and have had the privilege of impacting [key achievement/stat, e.g., "over 2,000 individuals across 15 cities"]. We believe that a partnership with [Recipient Organization Name], given your organization's strong presence and expertise in [their domain/area of work], could create meaningful and lasting impact.</p>
+            <p>We would like to propose collaborating on [specific initiative — e.g., "an upcoming community outreach program," "a joint CSR initiative," "a skill-training workshop series"], where we envision [Your Organization Name] contributing [what you bring — e.g., "ground-level implementation and volunteer network"] and [Recipient Organization Name] contributing [what you're asking for — e.g., "funding support, resources, or technical expertise"].</p>
+            <p>We would be glad to share a detailed proposal outlining the scope, timeline, and expected outcomes of this collaboration at your convenience. Please let us know a suitable time, and we will be happy to accommodate.</p>
+          `,
+          lightingPass: `
+            <h4>3. Certificate Templates 1 & 2 — Internship & Volunteering (task 6.docx)</h4>
+            <p><strong>1. CERTIFICATE OF INTERNSHIP:</strong><br>
+            "This is to certify that <strong>[Intern Name]</strong> has successfully completed an internship with [Organization Name] as a [Role/Position Title], from [Start Date] to [End Date]. During this period, [he/she/they] demonstrated dedication, professionalism, and a strong commitment to learning, contributing meaningfully to [Team/Department/Project Name]. We commend [his/her/their] enthusiasm, adaptability, and the quality of work delivered throughout the internship."</p>
+            <p><strong>2. CERTIFICATE OF APPRECIATION (Volunteering):</strong><br>
+            "Presented to <strong>[Volunteer Name]</strong> in recognition of outstanding voluntary service to [Organization/Event Name] during [Duration/Event Dates]. [His/Her/Their] selfless dedication, time, and effort contributed significantly to [cause/initiative/event], making a real difference to our mission and the community we serve."</p>
+          `,
+          finalPass: `
+            <h4>4. Certificate Template 3 — Leadership Excellence (task 6.docx)</h4>
+            <p><strong>3. CERTIFICATE OF LEADERSHIP EXCELLENCE:</strong><br>
+            "This certificate is proudly presented to <strong>[Leader Name]</strong> in recognition of exceptional leadership demonstrated as [Role/Title] for [Team/Project/Event Name], from [Start Date] to [End Date]. Through vision, initiative, and the ability to inspire and guide others, [he/she/they] played a pivotal role in driving the team toward success. [His/Her/Their] commitment to excellence, sound decision-making, and collaborative spirit set a benchmark for others to follow."</p>
+          `
+        },
+        {
+          id: 'boat-report',
+          title: 'boAt Strategic Intelligence Report (FY23–FY26 Brief)',
+          year: '2026',
+          client: 'Independent Portfolio Deliverable (Imagine Marketing Ltd)',
+          categoryKey: 'audit',
+          categoryLabel: 'Business Intelligence & Audits',
+          badgeClass: 'badge-verified',
+          badgeText: 'Experience Summary',
+          tools: ['Financial Synthesis', 'UDRHP Analysis', 'Market Positioning', 'SWOT & Strategy'],
+          role: 'Research Analyst & Strategic Writer',
+          livePreview: 'FY26 Revenue: ₹2,931 Cr | PAT: ₹84.5 Cr (+38.3%) | Cash: ~₹397 Cr | Zero Bank Debt',
+          overview: 'A 4-page executive intelligence brief analyzing boAt (Imagine Marketing Ltd) across FY23–FY26 financials, ₹1,500 Cr IPO structure (₹500 Cr fresh issue + ₹1,000 Cr OFS), product/channel mix, and cost-led profitability drivers.',
+          conceptRef: 'Synthesized from UDRHP filing disclosures and FY26 company financial statements to answer how profit rose 38% despite three consecutive years of revenue decline.',
+          wireframePass: `
+            <h4>1. Wireframe Pass — 4-Page Executive Architecture</h4>
+            <ul>
+              <li><strong>Section 1–3:</strong> Executive Summary & FY23–FY26 Financial Trend Table (Revenue, PAT, PBT, Cash, ROCE 15.2%).</li>
+              <li><strong>Section 4–5:</strong> FY25 Product Mix (Audio 84.2%, Wearables 10.8%, Other 5.0%), Channel Split (Online 70.55%, Offline 29.45%), and Ad Spend Intensity.</li>
+              <li><strong>Section 6–9:</strong> ₹1,500 Cr IPO proceeds breakdown (₹225 Cr working capital, ₹150 Cr brand marketing over FY26–FY28) and Strategic Recommendations.</li>
+            </ul>
+          `,
+          clayPass: `
+            <h4>2. Clay Pass — Multi-Year Financial Trajectory</h4>
+            <p>Tracked revenue from the FY23 peak of ₹3,376.8 Cr (net loss ~₹129.4 Cr) through FY24 (₹3,117.7 Cr, net loss ₹79.7 Cr) and FY25 (₹3,073.3 Cr, PAT ₹61.1 Cr) to FY26 (₹2,931 Cr, PAT ₹84.5 Cr).</p>
+          `,
+          lightingPass: `
+            <h4>3. Audit Integration Pass — Cost-Led Profit Thesis</h4>
+            <p>Proved mathematically that FY26's pre-tax profit increase (+₹39.6 Cr, from ₹74.7 Cr to ₹114.3 Cr) was driven by lower finance costs (−₹20.0 Cr) and lower warranty expenses (−₹25.1 Cr), totaling ₹45.1 Cr in operational savings.</p>
+          `,
+          finalPass: `
+            <h4>4. Final Takeaway — Strategic Synthesis</h4>
+            <p>Separated boAt's balance-sheet cleanup (~₹397 Cr cash, zero bank debt) from its top-line growth challenge, providing an honest investor-grade briefing subsequently stress-tested in my 33-claim audit.</p>
+          `
+        },
+        {
+          id: 'daymark-carousel',
+          title: 'Daymark: "A Calmer Weekly Reset" (7-Slide Carousel)',
+          year: '2026',
+          client: 'Daymark (Fictional Productivity App Concept Sample)',
+          categoryKey: 'social',
+          categoryLabel: 'Social & Campaign Strategy',
+          badgeClass: 'badge-concept',
+          badgeText: 'Concept Sample',
+          tools: ['Instagram 1080x1350', 'Hook Psychology', 'Save-Rate Optimization'],
+          role: 'Social Media Copywriter & Content Architect',
+          livePreview: 'Slide 1 Hook: "Behind by Wednesday? Reset your week in 10 minutes." → 7-Slide Flow',
+          overview: 'A 7-slide Instagram carousel engineered to convert midweek overwhelm into high save-to-reach ratios and bio-link checklist downloads.',
+          conceptRef: 'Targets students and early-career professionals experiencing Wednesday burnout with a guilt-free, 10-minute tactical reset.',
+          wireframePass: `
+            <h4>1. Wireframe Pass — 7-Slide Retention Arc</h4>
+            <p>Slide 1: Pattern-Interrupt Hook → Slides 2–5: 4 Actionable Steps (Brain Dump, Pick 3, Block Time, Leave a 1-Hour Gap) → Slide 6: Friday Review → Slide 7: Save + Bio Link CTA.</p>
+          `,
+          clayPass: `
+            <h4>2. Clay Pass — Complete 7-Slide Copy Script</h4>
+            <ul>
+              <li><strong>Slide 1 (Hook):</strong> "Behind by Wednesday? Reset your week in 10 minutes."</li>
+              <li><strong>Slide 2 (Step 1):</strong> "Brain dump: Write down everything on your mind. Don't sort it yet."</li>
+              <li><strong>Slide 3 (Step 2):</strong> "Pick three: Circle the three things that actually matter this week."</li>
+              <li><strong>Slide 4 (Step 3):</strong> "Block time: Put each of the three in your calendar before anything else."</li>
+              <li><strong>Slide 5 (Step 4):</strong> "Leave a gap: Keep one empty hour. Real plans need slack."</li>
+              <li><strong>Slide 6 (Step 5):</strong> "Review Friday: Note what moved. Carry the rest forward without guilt."</li>
+              <li><strong>Slide 7 (CTA):</strong> "Save this for Sunday night. Link in bio for the free reset checklist."</li>
+            </ul>
+          `,
+          lightingPass: `
+            <h4>3. Caption & Hook Polish Pass</h4>
+            <p><strong>Post Caption:</strong> "Most weeks don't go to plan—and beating yourself up on Wednesday only wastes Thursday. A 10-minute reset gives your schedule breathing room without starting from scratch. 📌 Save this post for Sunday night, and grab our free 1-page reset checklist from the link in bio."</p>
+          `,
+          finalPass: `
+            <h4>4. Final Render — Target Performance Signals</h4>
+            <p>Optimized specifically for <strong>Saves</strong> (bookmarking for Sunday night) and <strong>DM Shares</strong> (sending to overwhelmed peers).</p>
+          `
+        },
+        {
+          id: 'daymark-calendar',
+          title: 'Daymark 7-Day Multi-Channel Content Engine',
+          year: '2026',
+          client: 'Daymark (Fictional Productivity Brand Concept)',
+          categoryKey: 'social',
+          categoryLabel: 'Social & Campaign Strategy',
+          badgeClass: 'badge-concept',
+          badgeText: 'Concept Sample',
+          tools: ['Editorial Calendar', 'Instagram', 'LinkedIn', 'Blog & Newsletter'],
+          role: 'Content Strategist',
+          livePreview: 'Mon–Sun Matrix: Maps Audience Emotional State → Platform Format → Core Message → KPI',
+          overview: 'A 7-day omni-channel editorial calendar synchronizing Instagram Carousels, LinkedIn text posts, Reels, Story Polls, Blog editorials, and Sunday Email Newsletters.',
+          conceptRef: 'Aligns content format with the exact psychological energy level of the audience on each day of the week.',
+          wireframePass: `
+            <h4>1. Wireframe Pass — Emotional Cadence Mapping</h4>
+            <p>Monday (Structure) → Tuesday (Overwhelm triage) → Wednesday (Midweek rescue) → Thursday (Community validation) → Friday (Progress review) → Saturday (Permission to rest) → Sunday (Reset preparation).</p>
+          `,
+          clayPass: `
+            <h4>2. Complete 7-Day Content Strategy Matrix</h4>
+            <table>
+              <thead>
+                <tr><th>Day</th><th>Platform & Format</th><th>Topic</th><th>Core Message</th><th>Target CTA</th><th>Primary KPI</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Mon</td><td>IG Carousel</td><td>Weekly Reset</td><td>10 mins on Sunday saves 4 hours later</td><td>Save post</td><td>Saves</td></tr>
+                <tr><td>Tue</td><td>LinkedIn Text</td><td>The 3-Task Rule</td><td>Choose 3 priorities today, not 12</td><td>Comment your 3</td><td>Comments</td></tr>
+                <tr><td>Wed</td><td>IG Reel</td><td>Midweek Reset</td><td>Behind by Wed is normal; reset</td><td>Send to a friend</td><td>Shares / DMs</td></tr>
+                <tr><td>Thu</td><td>IG Story Poll</td><td>Planning Habits</td><td>Time-blocking vs loose list</td><td>Vote in sticker poll</td><td>Poll Votes</td></tr>
+                <tr><td>Fri</td><td>Blog Editorial</td><td>5-Min Friday Review</td><td>5-min review beats weekend guilt</td><td>Read full guide</td><td>Blog CTR</td></tr>
+                <tr><td>Sat</td><td>IG Visual Card</td><td>Rest as Strategy</td><td>Good plans schedule downtime</td><td>Tag a friend</td><td>Organic Reach</td></tr>
+                <tr><td>Sun</td><td>Email Newsletter</td><td>Reset Template</td><td>Start Monday with a 1-page plan</td><td>Subscribe free</td><td>Sign-ups</td></tr>
+              </tbody>
+            </table>
+          `,
+          lightingPass: `
+            <h4>3. LinkedIn Companion Sample — "Turning Research Into Writing People Can Use"</h4>
+            <p>"Research that nobody can put to use hasn't done its job yet. When I research a topic, I finish with far more material than any reader actually needs. The real work is having the discipline to leave 80% of it out. Three questions keep me honest: 1. Who is reading, and what do they already know? 2. What single decision or action should this help them make? 3. Which two or three facts support it best?"</p>
+          `,
+          finalPass: `
+            <h4>4. Final Render — Full-Funnel Cohesion</h4>
+            <p>Connects top-of-funnel social reach (Sat/Wed) with mid-funnel engagement (Tue/Thu) and bottom-of-funnel newsletter capture (Fri/Sun).</p>
+          `
+        },
+        {
+          id: 'website-article',
+          title: '"Make Your Website Easier to Act On" (UX & CRO Editorial)',
+          year: '2026',
+          client: 'Self-Published Editorial Sample (Small Business Owners)',
+          categoryKey: 'editorial',
+          categoryLabel: 'Long-Form Editorial & Books',
+          badgeClass: 'badge-concept',
+          badgeText: 'Full Article Published',
+          tools: ['UX Copywriting', 'Conversion Architecture', 'Editorial Clarity'],
+          role: 'Author & Conversion Editor',
+          livePreview: `"If a stranger scanning your headline and first button can't tell what to do next, you have a copy problem."`,
+          overview: 'A 3-minute practical editorial guide diagnosing why visually impressive small-business websites lose customers—and how plain-sentence headlines and specific microcopy fix conversion leaks.',
+          conceptRef: 'Written around three instinctive visitor questions: What is this? Is it for me? What do I do next?',
+          wireframePass: `
+            <h4>1. Wireframe Pass — 5 Core Conversion Principles</h4>
+            <ol>
+              <li>Say what you do in one plain sentence at the top of the page.</li>
+              <li>Give each page one main commercial job.</li>
+              <li>Write buttons that declare exactly what happens next.</li>
+              <li>Remove the unspoken extra step (un-tappable numbers, 7-field forms).</li>
+              <li>Run the 5-minute mobile homepage test.</li>
+            </ol>
+          `,
+          clayPass: `
+            <h4>2. Full Article Text (Part 1)</h4>
+            <p>A visitor gives your website about as much attention as it takes to decide whether the page is worth the trouble. In that fleeting opening moment, they are asking three instinctive questions: <em>What is this? Is it for me? What do I do next?</em> If your page fails to answer all three within seconds, they quietly leave.</p>
+            <p><strong>Say what you do in one plain sentence:</strong> Too many brands hide behind corporate abstraction. <em>"Fresh South Indian breakfasts, served hot until noon"</em> tells a customer infinitely more than <em>"A transformative culinary journey like no other."</em> Put the plain, unambiguous version at the absolute top of the page.</p>
+            <p><strong>Give each page one main job:</strong> A neighborhood café's homepage might want people to book a table, view the evening menu, order delivery, follow on Instagram, and find the street address. Trying to demand all five simultaneously creates decision paralysis. Pick the primary commercial action that matters most.</p>
+          `,
+          lightingPass: `
+            <h4>3. Full Article Text (Part 2)</h4>
+            <p><strong>Write buttons that declare what happens next:</strong> Vague buttons like "Submit" or "Learn More" make users pause. Specific microcopy like "Book a table for tonight", "Download the 2026 syllabus", or "Get your instant quote" removes hesitation. The same discipline applies to headings: a user skimming on a phone should understand your entire offering from the section headings alone.</p>
+            <p><strong>Remove the unspoken extra step:</strong> Audit your customer's journey for silent friction: an un-tappable phone number on mobile, a form with seven mandatory inputs when two would suffice, or vague pricing tables.</p>
+          `,
+          finalPass: `
+            <h4>4. The 5-Minute Homepage Test</h4>
+            <p>"Open your current website on your phone right now. Read only the headline and the first button you see. If a stranger couldn't explain your service and take the next step without thinking, that is the first edit you should make today."</p>
+          `
+        },
+        {
+          id: 'ai-book',
+          title: 'The AI Productivity Advantage (14,500-Word Book Manuscript)',
+          year: '2026',
+          client: 'Personal Publishing Project',
+          categoryKey: 'editorial',
+          categoryLabel: 'Long-Form Editorial & Books',
+          badgeClass: 'badge-personal',
+          badgeText: 'Personal Project',
+          tools: ['Long-Form Manuscript', '12 Chapters + 8 Appendices', 'CADF Framework'],
+          role: 'Sole Author & Systems Designer',
+          livePreview: '14,500 Words | 12 Chapters | 8 Appendices | CADF & Time Audit Matrix Frameworks',
+          overview: 'A complete ~14,500-word practical guide subtitled "A 30-Day System to Reclaim 10 Hours a Week and Build a Profitable Side Income Using AI" structured across 12 chapters and 8 tactical appendices.',
+          conceptRef: 'Built on a repeatable 7-part chapter architecture so busy professionals can move from theory to implementation without fluff.',
+          wireframePass: `
+            <h4>1. Wireframe Pass — Repeatable 7-Part Chapter Architecture</h4>
+            <p>Every chapter follows an identical reader-first template: (1) Problem Diagnosis → (2) Core Concept → (3) Real-World Example → (4) Step-by-Step Action Plan → (5) Common Mistakes → (6) Reflection Questions → (7) Implementation Checklist.</p>
+          `,
+          clayPass: `
+            <h4>2. Manuscript Part 1 & Part 2 Breakdown (Chapters 1–9)</h4>
+            <ul>
+              <li><strong>Part One (Chapters 1–3):</strong> Diagnoses weekly time leaks using the <strong>Capture, Automate, Delegate, Focus (CADF)</strong> framework and the <strong>Time Audit Matrix</strong>.</li>
+              <li><strong>Part Two (Chapters 4–9):</strong> Builds a practical AI workflow stack for email triage, weekly planning, repetitive admin tasks, research drafting, and meeting synthesis.</li>
+            </ul>
+          `,
+          lightingPass: `
+            <h4>3. Manuscript Part 3 & Appendices (Chapters 10–12 + 8 Appendices)</h4>
+            <ul>
+              <li><strong>Part Three (Chapters 10–12):</strong> Converts reclaimed hours into skill monetization with a day-by-day 30-day execution plan and monthly review cadence (setting realistic expectations that month-one income is modest by design).</li>
+              <li><strong>8 Appendices:</strong> Prompt library, copy-paste templates, AI tools by category, printable worksheets, 1-page framework cheat sheet, glossary, and FAQ.</li>
+            </ul>
+          `,
+          finalPass: `
+            <h4>4. Final Takeaway — Long-Form Endurance & Structural Discipline</h4>
+            <p>Demonstrates the ability to sustain voice, structural consistency, and reader utility across a 14,500-word technical-meets-practical manuscript.</p>
+          `
+        },
+        {
+          id: 'restaurant-demos',
+          title: 'UK Indian Restaurant Web Demos & Gmail Pitch Automation',
+          year: '2026',
+          client: 'Independent Outbound & CRO Venture',
+          categoryKey: 'tech',
+          categoryLabel: 'AI, Web Demos & Code Slides',
+          badgeClass: 'badge-verified',
+          badgeText: 'Experience Summary',
+          tools: ['HTML5 / CSS3 Prototypes', 'Gmail Draft Automation', 'Mobile CRO', 'Cold Outreach Copy'],
+          role: 'Web Prototyper & Outbound Copywriter',
+          livePreview: 'Subject: "A booking button for your homepage?" → 2-Tap Mobile Table Reservation Demo',
+          overview: 'Built interactive, mobile-first website prototypes for UK-based Indian restaurants paired with an automated Gmail draft workflow that sends personalized, zero-pressure conversion audits.',
+          conceptRef: 'Solves a common local-business leak: burying the table reservation link at the bottom of a desktop PDF menu.',
+          wireframePass: `
+            <h4>1. Wireframe Pass — Friction Diagnosis</h4>
+            <p>Audited UK restaurant websites where mobile diners had to pinch-zoom PDF menus or scroll past 4screens of text just to book a table for tonight.</p>
+          `,
+          clayPass: `
+            <h4>2. Verified Cold Outreach Pitch Copy</h4>
+            <p><strong>Subject:</strong> A booking button for your homepage?<br><br>
+            Hi [Owner's Name],<br><br>
+            I was looking at your restaurant's website and noticed your reservation link sits near the bottom of the page. On a mobile phone, a hungry diner might never scroll down that far.<br><br>
+            I built a quick, 2-minute interactive demo showing how your homepage could place "Book a table for tonight" directly front and center. There's zero obligation.<br><br>
+            Would you like me to send over the link?<br><br>
+            Best regards,<br>
+            <strong>Prince Kumar Sahu</strong></p>
+          `,
+          lightingPass: `
+            <h4>3. Automation Pass — Gmail API Draft Pipeline</h4>
+            <p>Automated the creation of customized Gmail drafts pre-populated with each restaurant's specific homepage friction point and custom demo preview link.</p>
+          `,
+          finalPass: `
+            <h4>4. Final Render — Value-First Outbound Philosophy</h4>
+            <p>Demonstrates how combining technical prototyping + empathetic cold copy beats generic spam pitches.</p>
+          `
+        },
+        {
+          id: 'pabbly-perplexity-skein',
+          title: 'Pabbly CRO Audit, Perplexity Code Deck & Skein SaaS UI',
+          year: '2026',
+          client: 'Independent Technical & Product Copy Suite',
+          categoryKey: 'tech',
+          categoryLabel: 'AI, Web Demos & Code Slides',
+          badgeClass: 'badge-verified',
+          badgeText: '3 Technical Projects',
+          tools: ['pptxgenjs (JavaScript)', 'SaaS Product Copy', 'Heuristic CRO Matrix', 'Linear/Stripe UI'],
+          role: 'Product Copywriter & Technical Builder',
+          livePreview: 'Pabbly Landing-Page Teardown + Perplexity AI pptxgenjs Deck + Skein Developer SaaS Page',
+          overview: 'Three technical-meets-editorial builds from my verified portfolio: (1) Pabbly automation landing-page CRO teardown; (2) Perplexity AI consulting presentation generated via code using pptxgenjs; and (3) Skein developer SaaS landing page.',
+          conceptRef: 'Bridges B.Tech CSE (AI & ML) coding fluency with B2B SaaS positioning and executive presentation design.',
+          wireframePass: `
+            <h4>1. Pabbly Landing-Page Conversion Rate Optimization (CRO) Audit</h4>
+            <ul>
+              <li><strong>5-Second Value Proposition Test:</strong> Evaluated how quickly a first-time visitor differentiates Pabbly from Zapier or Make.</li>
+              <li><strong>Visual Hierarchy & Cognitive Load:</strong> Mapped eye-tracking flow across pricing tables, feature grids, and trust badges.</li>
+              <li><strong>CTA Micro-Copy Audit:</strong> Flagged friction in trial signup commitments and FAQ placement.</li>
+            </ul>
+          `,
+          clayPass: `
+            <h4>2. Perplexity AI Consulting Deck (Built Programmatically with pptxgenjs)</h4>
+            <ul>
+              <li><strong>Code-Driven Slide Generation:</strong> Authored JavaScript code using <code>pptxgenjs</code> to programmatically generate consulting slides with exact geometric alignment and typography.</li>
+              <li><strong>Strategic Analysis:</strong> Evaluated Perplexity AI's citation-backed answer engine moat against traditional ad-based link search, Pro subscription economics, and enterprise API pathways.</li>
+            </ul>
+          `,
+          lightingPass: `
+            <h4>3. Skein: Developer SaaS Landing Page (Personal Project)</h4>
+            <ul>
+              <li><strong>Linear/Stripe-Inspired UI & Copy:</strong> Designed and coded a dark-mode SaaS landing page focused on developer observability.</li>
+              <li><strong>Benefit Reframing:</strong> Translated raw server telemetry specs into immediate engineer outcomes (<em>"Deploy without looking at logs"</em>).</li>
+            </ul>
+          `,
+          finalPass: `
+            <h4>4. Final Synthesis — Why Technical + Editorial Matters</h4>
+            <p>Being able to read code, build programmatic decks in JavaScript, and audit SaaS conversion funnels allows me to write for technical and B2B audiences without hand-holding.</p>
+          `
+        }
+      ];
+
+      /* ----------------------------------------------------------------------
+         D. RENDER PROJECT GRID & CATEGORY FILTERING
+         ---------------------------------------------------------------------- */
+      const gridEl = document.getElementById('grid');
+
+      function renderProjectGrid(filterCat = 'all') {
+        gridEl.innerHTML = '';
+        const filtered = projects.filter(p => filterCat === 'all' || p.categoryKey === filterCat);
+
+        filtered.forEach(p => {
+          const card = document.createElement('article');
+          card.className = 'project-card';
+          card.setAttribute('tabindex', '0');
+          card.setAttribute('role', 'button');
+          card.setAttribute('aria-label', `Open project: ${p.title}`);
+          card.onclick = () => openProjectModal(p.id);
+          card.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openProjectModal(p.id); } };
+
+          card.innerHTML = `
+            <div class="project-thumb">
+              <div class="thumb-wireframe-grid"></div>
+              <div class="thumb-top-bar">
+                <span class="badge ${p.badgeClass}">${p.badgeText}</span>
+                <span class="hover-gif-pill">● LIVE PREVIEW</span>
+              </div>
+              <div class="thumb-live-preview">
+                <span style="color:var(--text-dim); display:block; font-size:0.68rem; margin-bottom:0.2rem;">VERIFIED EXCERPT // ${p.year}</span>
+                <span class="preview-line-anim">${p.livePreview}</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div>
+                <div class="project-cat-label">${p.categoryLabel}</div>
+                <h3 class="project-title">${p.title}</h3>
+                <p class="project-desc">${p.overview}</p>
+              </div>
+              <div>
+                <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.9rem;">
+                  ${p.tools.map(t => `<span style="font-family:var(--font-mono); font-size:0.7rem; background:rgba(255,255,255,0.05); padding:0.2rem 0.5rem; border-radius:4px; color:var(--text-muted);">${t}</span>`).join('')}
+                </div>
+                <div class="project-footer">
+                  <span>Open 4-Pass Project Template</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </div>
+          `;
+          gridEl.appendChild(card);
+        });
+      }
+
+      renderProjectGrid('all');
+
+      document.querySelectorAll('.cat-btn[data-cat]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.cat-btn[data-cat]').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderProjectGrid(btn.getAttribute('data-cat'));
+        });
+      });
+
+      /* ----------------------------------------------------------------------
+         E. SECTION 5: PROJECT PAGE TEMPLATE MODAL (WITH 4 WIP/FINAL TABS)
+         ---------------------------------------------------------------------- */
+      const projectModal = document.getElementById('project-modal');
+      const projectModalBody = document.getElementById('project-modal-body');
+
+      window.openProjectModal = function (projectId) {
+        // Map resource shortcuts if clicked from Section 7
+        const lookupId = projectId === 'sanyukt-certificates' ? 'sanyukt-outreach' : projectId;
+        const p = projects.find(item => item.id === lookupId) || projects[0];
+
+        projectModalBody.innerHTML = `
+          <button class="modal-close" onclick="closeProjectModal()" aria-label="Close Project Page">✕</button>
+          <div style="display:flex; flex-wrap:wrap; gap:0.6rem; align-items:center; margin-bottom:0.65rem;">
+            <span class="badge ${p.badgeClass}">${p.badgeText}</span>
+            <span style="font-family:var(--font-mono); font-size:0.78rem; color:var(--accent-secondary);">${p.categoryLabel} · ${p.year}</span>
+          </div>
+
+          <h2 style="font-size:clamp(1.55rem, 3vw, 2.2rem); color:var(--text-white); font-weight:850; line-height:1.2; margin-bottom:1rem;">
+            ${p.title}
+          </h2>
+
+          <!-- Project Page Metadata Bar (Client, Role, Tools Used) -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; background:var(--bg-void); border:1px solid var(--border-dim); border-radius:var(--radius-md); padding:1.1rem; margin-bottom:1.25rem;">
+            <div>
+              <div style="font-family:var(--font-mono); font-size:0.7rem; color:var(--text-dim); text-transform:uppercase;">Client / Context</div>
+              <div style="font-size:0.88rem; font-weight:700; color:var(--text-white);">${p.client}</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-mono); font-size:0.7rem; color:var(--text-dim); text-transform:uppercase;">Role & Responsibilities</div>
+              <div style="font-size:0.88rem; font-weight:700; color:var(--accent-primary);">${p.role}</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-mono); font-size:0.7rem; color:var(--text-dim); text-transform:uppercase;">Software & Frameworks</div>
+              <div style="font-size:0.82rem; color:var(--text-light);">${p.tools.join(' · ')}</div>
+            </div>
+          </div>
+
+          <p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            <strong style="color:var(--text-white);">Project Overview:</strong> ${p.overview}
+          </p>
+          <p style="font-size:0.88rem; color:var(--text-dim);">
+            <strong style="color:var(--text-light);">Concept / Reference Basis:</strong> ${p.conceptRef}
+          </p>
+
+          <!-- WIP Passes & Final Render Switcher -->
+          <div class="wip-tabs" role="tablist">
+            <button class="wip-tab active" data-pass="wireframe">1. Wireframe Pass (Structure)</button>
+            <button class="wip-tab" data-pass="clay">2. Clay Pass (Draft / Data)</button>
+            <button class="wip-tab" data-pass="lighting">3. Audit &amp; Polish Pass</button>
+            <button class="wip-tab" data-pass="final">4. Final Render (Deliverable)</button>
+            <button class="wip-tab" data-pass="all">View Complete Breakdown</button>
+          </div>
+
+          <div class="doc-viewer" id="doc-pass-Stage">
+            ${p.wireframePass}
+            ${p.clayPass}
+            ${p.lightingPass}
+            ${p.finalPass}
+          </div>
+        `;
+
+        const stageEl = document.getElementById('doc-pass-Stage');
+        const passMap = {
+          wireframe: p.wireframePass,
+          clay: p.clayPass,
+          lighting: p.lightingPass,
+          final: p.finalPass,
+          all: p.wireframePass + p.clayPass + p.lightingPass + p.finalPass
+        };
+
+        projectModalBody.querySelectorAll('.wip-tab').forEach(tab => {
+          tab.addEventListener('click', () => {
+            projectModalBody.querySelectorAll('.wip-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            stageEl.innerHTML = passMap[tab.getAttribute('data-pass')];
+          });
+        });
+
+        projectModal.classList.add('open');
+        projectModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      window.closeProjectModal = function () {
+        projectModal.classList.remove('open');
+        projectModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      projectModal.addEventListener('click', (e) => {
+        if (e.target === projectModal) closeProjectModal();
+      });
+
+      /* ----------------------------------------------------------------------
+         F. SECTION 2: SHOWREEL MODAL (AUTOPLAY INTERACTIVE REEL)
+         ---------------------------------------------------------------------- */
+      const reelScenes = [
+        {
+          id: 'boat-audit',
+          tag: 'SCENE 01 / 05 · NUMERICAL FACT-CHECKING & AUDIT',
+          title: 'boAt Strategic Report Audit (33 Claims & 23 Recalculated Metrics)',
+          desc: 'Extracted 33 claims from my 4-page boAt intelligence report, recalculated 23 growth rates and PBT bridges, confirmed ₹84.5 Cr PAT (+38.3%), and flagged 5 unverified secondary claims.'
+        },
+        {
+          id: 'campaign-review',
+          tag: 'SCENE 02 / 05 · PERFORMANCE MARKETING TEARDOWN',
+          title: 'Paid Media Strategy & Video Creative Audit (19 Issues, 11 Fixes)',
+          desc: 'Evaluated a $100K–$200K advertising plan and a 9:43 UNIQLO-style influencer video against Meta Reels, TikTok, and Google Search execution standards.'
+        },
+        {
+          id: 'sanyukt-social',
+          tag: 'SCENE 03 / 05 · CERTIFIED INTERNSHIP DELIVERABLES',
+          title: 'Sanyukt Social Media Captions, Story Polls & CSR Outreach Suite',
+          desc: 'Authored multi-topic social campaigns (Women Empowerment, Youth, Environment), 5 interactive finance/AI story polls, and formal CSR partnership invitations.'
+        },
+        {
+          id: 'daymark-carousel',
+          tag: 'SCENE 04 / 05 · SOCIAL CAROUSEL & 7-DAY CONTENT ENGINE',
+          title: 'Daymark: "A Calmer Weekly Reset" + 7-Day Multi-Channel Matrix',
+          desc: 'Designed a 7-slide retention carousel and a Monday–Sunday editorial calendar matching audience emotional states to specific KPIs.'
+        },
+        {
+          id: 'ai-book',
+          tag: 'SCENE 05 / 05 · LONG-FORM MANUSCRIPT & TECHNICAL BUILDS',
+          title: '14,500-Word AI Productivity Book + UK Restaurant CRO Demos',
+          desc: 'Wrote a 12-chapter, 8-appendix book on AI workflows alongside interactive UK restaurant booking demos and programmatic pptxgenjs slides.'
+        }
+      ];
+
+      let reelIdx = 0;
+      let reelTimer = null;
+      let reelPlaying = true;
+
+      const showreelModal = document.getElementById('showreel-modal');
+      const reelCounter = document.getElementById('reel-scene-counter');
+      const reelTitle = document.getElementById('reel-scene-title');
+      const reelDesc = document.getElementById('reel-scene-desc');
+      const reelFill = document.getElementById('reel-progress-fill');
+      const reelPlayPauseBtn = document.getElementById('reel-play-pause');
+      const reelTimerBadge = document.getElementById('reel-timer-badge');
+      const reelPlaylist = document.getElementById('reel-playlist');
+
+      function renderReelScene(idx) {
+        reelIdx = (idx + reelScenes.length) % reelScenes.length;
+        const s = reelScenes[reelIdx];
+        reelCounter.textContent = s.tag;
+        reelTitle.textContent = s.title;
+        reelDesc.textContent = s.desc;
+        reelFill.style.width = ((reelIdx + 1) / reelScenes.length * 100) + '%';
+
+        reelPlaylist.innerHTML = reelScenes.map((item, i) => `
+          <button type="button" class="cat-btn ${i === reelIdx ? 'active' : ''}" style="text-align:left; border-radius:10px; padding:0.6rem 0.8rem; font-size:0.76rem;" onclick="jumpReel(${i})">
+            <strong>0${i + 1}.</strong> ${item.title.slice(0, 28)}...
+          </button>
+        `).join('');
+      }
+
+      function startReelTimer() {
+        clearInterval(reelTimer);
+        if (!reelPlaying) return;
+        reelTimer = setInterval(() => {
+          renderReelScene(reelIdx + 1);
+        }, 5000);
+      }
+
+      window.openShowreelModal = function () {
+        showreelModal.classList.add('open');
+        showreelModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        reelPlaying = true;
+        reelPlayPauseBtn.textContent = '⏸ Pause Autoplay';
+        reelTimerBadge.textContent = 'AUTOPLAY: ON (5s/scene)';
+        renderReelScene(0);
+        startReelTimer();
+      };
+
+      window.closeShowreelModal = function () {
+        showreelModal.classList.remove('open');
+        showreelModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        clearInterval(reelTimer);
+      };
+
+      window.StepReel = function (dir) {
+        renderReelScene(reelIdx + dir);
+        startReelTimer();
+      };
+
+      window.jumpReel = function (i) {
+        renderReelScene(i);
+        startReelTimer();
+      };
+
+      window.toggleReelAutoplay = function () {
+        reelPlaying = !reelPlaying;
+        reelPlayPauseBtn.textContent = reelPlaying ? '⏸ Pause Autoplay' : '▶ Resume Autoplay';
+        reelTimerBadge.textContent = reelPlaying ? 'AUTOPLAY: ON (5s/scene)' : 'AUTOPLAY: PAUSED';
+        if (reelPlaying) startReelTimer();
+        else clearInterval(reelTimer);
+      };
+
+      window.inspectCurrentReelProject = function () {
+        const targetId = reelScenes[reelIdx].id;
+        closeShowreelModal();
+        openProjectModal(targetId);
+      };
+
+      showreelModal.addEventListener('click', (e) => {
+        if (e.target === showreelModal) closeShowreelModal();
+      });
+
+      /* ----------------------------------------------------------------------
+         G. CLIPBOARD HELPERS & VERIFIED PORTFOLIO SUMMARY DOWNLOAD
+         ---------------------------------------------------------------------- */
+      const toastEl = document.getElementById('toast');
+      let toastTimeout = null;
+
+      function showToast(msg) {
+        clearTimeout(toastTimeout);
+        toastEl.textContent = '✅ ' + msg;
+        toastEl.classList.add('show');
+        toastTimeout = setTimeout(() => toastEl.classList.remove('show'), 3200);
+      }
+
+      window.copyEmail = function () {
+        navigator.clipboard.writeText('p4426173@gmail.com').then(() => {
+          showToast('Copied email: p4426173@gmail.com');
+        });
+      };
+
+      window.copyResource = function (type) {
+        const texts = {
+          csr: `Subject: Invitation for Collaboration — [Your Organization Name] x [Recipient Organization Name]\n\nDear [Recipient Name / "Sir/Madam" / "Team [Organization Name]"],\n\nI hope this email finds you well.\nI am writing on behalf of [Your Organization Name], a [brief description — e.g., "non-profit organization working in the field of education and youth empowerment"], to explore the possibility of a collaboration between our organizations.\n\nOver the past [duration, e.g., "three years"], we have been actively working towards [brief mission/goal], and have had the privilege of impacting [key achievement/stat]. We believe that a partnership with [Recipient Organization Name] could create meaningful and lasting impact.\n\nWarm regards,\n[Your Full Name] | [Your Designation]`,
+          certs: `1. CERTIFICATE OF INTERNSHIP\nThis is to certify that [Intern Name] has successfully completed an internship with [Organization Name] as a [Role/Position Title], from [Start Date] to [End Date].\n\n2. CERTIFICATE OF APPRECIATION (Volunteering)\nPresented to [Volunteer Name] in recognition of outstanding voluntary service to [Organization/Event Name] during [Duration/Event Dates].\n\n3. CERTIFICATE OF LEADERSHIP EXCELLENCE\nThis certificate is proudly presented to [Leader Name] in recognition of exceptional leadership demonstrated as [Role/Title] for [Team/Project/Event Name].`,
+          article: `Make Your Website Easier to Act On — 5-Point Checklist (Prince Kumar Sahu):\n1. Say what you do in one plain sentence at the top of the page.\n2. Give each page one primary commercial job.\n3. Write buttons that declare what happens next (e.g. "Book a table for tonight").\n4. Remove silent mobile friction (un-tappable numbers, 7-field forms).\n5. Pass the 5-minute mobile homepage test.`
+        };
+        navigator.clipboard.writeText(texts[type] || '').then(() => {
+          showToast('Template copied to clipboard!');
+        });
+      };
+
+      window.downloadVerifiedSummary = function () {
+        const content = `PRINCE KUMAR SAHU — VERIFIED PORTFOLIO & CV SUMMARY (2026)
+====================================================================
+Role: Content Writer, Strategist & B.Tech CSE (AI & ML) Student
+Location: Faridabad, Haryana, India
+Email: p4426173@gmail.com
+LinkedIn: https://linkedin.com/in/prince-sahu-3b3876399
+GitHub: https://github.com/Pr59504
+
+EDUCATION
+- B.Tech in Computer Science & Engineering (AI & ML), Manav Rachna University, Faridabad (2026–Expected 2030, 1st Semester)
+
+CERTIFIED EXPERIENCE
+- Content Writing Intern / Trainee at Sanyukt (1-Month Engagement, Certificate Awarded)
+  * Delivered Women's Empowerment, Youth Participation & Environment social campaigns
+  * Created #Sanyukt community hashtag bank & 5 interactive finance/AI story polls (Task 7)
+  * Authored B2B/CSR collaboration email invitation template (Task 8) & 3 official certificate frameworks (Task 6)
+
+INDEPENDENT PROJECTS & AUDITS
+1. boAt Strategic Intelligence Report & 33-Claim Numerical Audit (Oct 2026):
+   - Audited FY23–FY26 revenue (₹3,376.8 Cr to ₹2,931 Cr), FY26 PAT (₹84.5 Cr, +38.3%), and PBT cost-savings bridge (₹45.1 Cr finance + warranty savings vs ₹39.6 Cr PBT rise).
+2. Performance Marketing Campaign Review (June 2026):
+   - Identified 19 issues (14 High Severity) across a $100k–$200k strategy plan and a 9:43 16:9 720p UNIQLO-style video creative, proposing 11 concrete fixes.
+3. The AI Productivity Advantage (Book Manuscript):
+   - ~14,500 words across 12 chapters and 8 appendices (CADF & Time Audit Matrix frameworks).
+4. Daymark Concept Suite:
+   - 7-Slide "A Calmer Weekly Reset" Instagram Carousel + 7-Day Multi-Channel Content Calendar.
+5. Technical & CRO Builds:
+   - UK Indian Restaurant interactive booking demos + Gmail draft automation, Pabbly CRO teardown, Perplexity AI pptxgenjs deck, and Skein SaaS landing page.`;
+
+        const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Prince_Kumar_Sahu_Verified_Portfolio_Summary.txt';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('Downloaded Prince_Kumar_Sahu_Verified_Portfolio_Summary.txt');
+      };
+
+      /* ----------------------------------------------------------------------
+         H. SCROLL PROGRESS BAR & ESCAPE KEY HANDLER
+         ---------------------------------------------------------------------- */
+      const recruiterBrief = document.getElementById('recruiter-brief');
+      document.querySelectorAll('[data-open-recruiter]').forEach(button => button.addEventListener('click', () => recruiterBrief.showModal()));
+      document.querySelectorAll('[data-close-recruiter]').forEach(button => button.addEventListener('click', () => recruiterBrief.close()));
+      document.querySelectorAll('[data-recruiter-project]').forEach(button => button.addEventListener('click', () => {
+        const projectId = button.getAttribute('data-recruiter-project');
+        recruiterBrief.close();
+        openProjectModal(projectId);
+      }));
+      recruiterBrief.addEventListener('click', event => { if (event.target === recruiterBrief) recruiterBrief.close(); });
+
+      const siteNav = document.getElementById('site-nav');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = [...document.querySelectorAll('.nav-links a')];
+      menuToggle.addEventListener('click', () => {
+        const open = siteNav.classList.toggle('menu-open');
+        menuToggle.setAttribute('aria-expanded', String(open));
+      });
+      navLinks.forEach(link => link.addEventListener('click', () => {
+        siteNav.classList.remove('menu-open'); menuToggle.setAttribute('aria-expanded', 'false');
+      }));
+      const heroBoundary = new IntersectionObserver(([entry]) => siteNav.classList.toggle('is-floating', !entry.isIntersecting), { threshold: 0.02 });
+      heroBoundary.observe(document.getElementById('hero'));
+      const sectionObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => link.classList.toggle('active', link.hash === '#' + entry.target.id));
+      }), { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
+      ['hero','work','category','grid','about','spec','resource','sample','contact'].forEach(id => { const el = document.getElementById(id); if (el) sectionObserver.observe(el); });
+      const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('revealed'); revealObserver.unobserve(entry.target); }
+      }), { threshold: 0.12 });
+      document.querySelectorAll('.section-top, .project-grid, .about-grid, .resources-grid, .sample-panel, .hero-grid').forEach(el => { el.setAttribute('data-reveal',''); revealObserver.observe(el); });
+
+      const progressBar = document.getElementById('scroll-progress');
+      window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        progressBar.style.width = (height > 0 ? (winScroll / height) * 100 : 0) + '%';
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeProjectModal();
+          closeShowreelModal();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
