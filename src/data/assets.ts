@@ -43,57 +43,6 @@ export const projectMedia = {
   },
 } as const
 
-export const galleryAssets = [
-  {
-    id: 'arduino-bench',
-    src: `${assetRoot}/gallery/arduino-01.jpg`,
-    title: 'Arduino Microcontroller Test Bench',
-    caption: 'Breadboard circuit wiring, pin connections, and USB serial flashing.',
-    category: 'Projects',
-    tag: 'Hardware',
-  },
-  {
-    id: 'ultrasonic-radar',
-    src: `${assetRoot}/gallery/lab-01.jpg`,
-    title: 'Ultrasonic Pulse Timing Setup',
-    caption: 'Trigger and echo pin analysis for spatial distance calculation.',
-    category: 'Projects',
-    tag: 'Sensors',
-  },
-  {
-    id: 'campus-mru',
-    src: `${assetRoot}/gallery/campus-01.jpg`,
-    title: 'Manav Rachna University Campus',
-    caption: 'Academic environment at School of Engineering & Technology.',
-    category: 'Campus',
-    tag: 'Academic',
-  },
-  {
-    id: 'tech-workshop',
-    src: `${assetRoot}/gallery/workshop-01.jpg`,
-    title: 'Engineering Exploration Workshop',
-    caption: 'Collaborative problem solving and hands-on system building.',
-    category: 'Workshops',
-    tag: 'Collaboration',
-  },
-  {
-    id: 'code-editor',
-    src: `${assetRoot}/gallery/studio-01.jpg`,
-    title: 'C & Python Development Environment',
-    caption: 'VS Code workspace for structured algorithm and logic implementation.',
-    category: 'Life',
-    tag: 'Software',
-  },
-  {
-    id: 'bluetooth-comm',
-    src: `${assetRoot}/gallery/event-01.jpg`,
-    title: 'Wireless Serial Interface Testing',
-    caption: 'Pairing HC-05 module with Arduino UART for remote telemetry.',
-    category: 'Projects',
-    tag: 'IoT',
-  },
-] as const
-
 export const videoAssets = [
   {
     id: 'ee1',

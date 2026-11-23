@@ -11,7 +11,6 @@ import {
   Contact,
   Experience,
   Footer,
-  Gallery,
   Resume,
   Videos,
   Workshops,
@@ -47,7 +46,6 @@ export default function App() {
         <Projects />
         <Experience />
         <Workshops />
-        <Gallery />
         <Videos />
         <Resume />
         <Contact />

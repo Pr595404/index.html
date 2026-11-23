@@ -1,10 +1,9 @@
 import { useState, type FormEvent, type ReactNode } from 'react'
 import { Play, Download, Mail, X } from 'lucide-react'
 import { GitHubIcon, LinkedInIcon } from '../ui/BrandIcons'
-import { galleryAssets, resumeAsset, videoAssets } from '../../data/assets'
+import { resumeAsset, videoAssets } from '../../data/assets'
 import { navItems, person, workshops } from '../../data/site'
 import { Section } from '../ui/Section'
-import { cn } from '../../lib/cn'
 
 export function Experience() {
   return (
@@ -53,152 +52,6 @@ export function Workshops() {
         </div>
       </div>
     </section>
-  )
-}
-
-const galleryCats = ['All', 'Campus', 'Projects', 'Workshops', 'Life'] as const
-
-export function Gallery() {
-  const [cat, setCat] = useState<(typeof galleryCats)[number]>('All')
-  const [open, setOpen] = useState<(typeof galleryAssets)[number] | null>(null)
-  const items = galleryAssets.filter((g) => cat === 'All' || g.category === cat)
-
-  return (
-    <Section
-      id="gallery"
-      eyebrow="Photo gallery"
-      title="An editorial record."
-      kicker="Visual log of academic life, hardware test benches, and engineering activities at Manav Rachna University."
-    >
-      <div className="mb-8 flex flex-wrap gap-2">
-        {galleryCats.map((c) => (
-          <button
-            key={c}
-            type="button"
-            onClick={() => setCat(c)}
-            className={cn(
-              'rounded-full px-4 py-1.5 font-mono text-xs uppercase tracking-wider transition',
-              cat === c
-                ? 'bg-paper text-void font-semibold shadow-md'
-                : 'border border-white/10 text-fog hover:border-cyan/40 hover:text-paper',
-            )}
-          >
-            {c}
-          </button>
-        ))}
-      </div>
-      <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
-        {items.map((item, i) => (
-          <button
-            key={item.id}
-            type="button"
-            onClick={() => setOpen(item)}
-            className="group mb-5 block w-full break-inside-avoid overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] text-left transition hover:border-cyan/40 hover:bg-white/[0.04]"
-          >
-            <PlaceholderFrame seed={i} item={item} />
-          </button>
-        ))}
-      </div>
-      {open ? (
-        <div
-          className="fixed inset-0 z-[90] grid place-items-center bg-void/90 p-4 backdrop-blur-md"
-          role="dialog"
-          aria-modal
-          onClick={(e) => {
-            if (e.target === e.currentTarget) setOpen(null)
-          }}
-        >
-          <div className="relative w-full max-w-3xl overflow-hidden rounded-[28px] border border-white/20 bg-[#090b14] p-6 shadow-2xl">
-            <button
-              type="button"
-              className="absolute right-5 top-5 z-10 grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-black/60 text-paper hover:bg-white/20 hover:text-cyan transition"
-              onClick={() => setOpen(null)}
-              aria-label="Close image"
-            >
-              <X size={18} />
-            </button>
-            <div className="flex items-center gap-2 font-mono text-[11px] text-cyan">
-              <span>{open.category.toUpperCase()}</span>
-              <span>·</span>
-              <span>{open.tag}</span>
-            </div>
-            <h3 className="display mt-2 text-2xl md:text-3xl text-paper">{open.title}</h3>
-            <div className="mt-4 overflow-hidden rounded-2xl border border-white/15">
-              <PlaceholderFrame seed={galleryAssets.findIndex((g) => g.id === open.id)} item={open} tall />
-            </div>
-            <p className="mt-4 text-sm text-fog leading-relaxed">{open.caption}</p>
-          </div>
-        </div>
-      ) : null}
-    </Section>
-  )
-}
-
-function PlaceholderFrame({
-  seed,
-  item,
-  tall,
-}: {
-  seed: number
-  item: (typeof galleryAssets)[number]
-  tall?: boolean
-}) {
-  const h = 210 + (seed % 3) * 55
-  const colorA = seed % 2 === 0 ? '#5ee7ff' : '#8b7dff'
-  const colorB = seed % 2 === 0 ? '#4d8dff' : '#5ee7ff'
-
-  return (
-    <div className="relative overflow-hidden" style={{ height: tall ? 380 : h }}>
-      {/* Visual background with generative tech schematic */}
-      <svg className="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <radialGradient id={`g-${seed}`} cx="40%" cy="30%">
-            <stop offset="0%" stopColor={colorA} stopOpacity="0.25" />
-            <stop offset="60%" stopColor={colorB} stopOpacity="0.08" />
-            <stop offset="100%" stopColor="#04050a" stopOpacity="0.95" />
-          </radialGradient>
-        </defs>
-        <rect width="100%" height="100%" fill={`url(#g-${seed})`} />
-        {/* Subtle grid lines */}
-        {Array.from({ length: 6 }).map((_, idx) => (
-          <line
-            key={`h-${idx}`}
-            x1="0"
-            y1={idx * 60}
-            x2="100%"
-            y2={idx * 60}
-            stroke="rgba(255,255,255,0.04)"
-            strokeDasharray="4 4"
-          />
-        ))}
-        {Array.from({ length: 8 }).map((_, idx) => (
-          <line
-            key={`v-${idx}`}
-            x1={idx * 60}
-            y1="0"
-            x2={idx * 60}
-            y2="100%"
-            stroke="rgba(255,255,255,0.04)"
-            strokeDasharray="4 4"
-          />
-        ))}
-        {/* Abstract focal node */}
-        <circle cx="50%" cy="40%" r={28 + (seed % 4) * 8} fill="none" stroke={colorA} strokeOpacity="0.3" />
-        <circle cx="50%" cy="40%" r={10} fill={colorB} fillOpacity="0.4" />
-      </svg>
-
-      <div className="absolute inset-0 bg-linear-to-t from-void via-void/40 to-transparent" />
-
-      <div className="absolute inset-x-0 bottom-0 p-5">
-        <span className="rounded-full bg-cyan/15 px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-cyan border border-cyan/20">
-          {item.tag}
-        </span>
-        <p className="mt-2 text-base font-semibold text-paper group-hover:text-cyan transition-colors">
-          {item.title}
-        </p>
-        <p className="mt-1 text-xs text-fog line-clamp-2">{item.caption}</p>
-      </div>
-    </div>
   )
 }
 
