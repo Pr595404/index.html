@@ -1,7 +1,7 @@
 import { useState, type FormEvent, type ReactNode } from 'react'
-import { Play, Download, Award, Mail, X } from 'lucide-react'
+import { Play, Download, Mail, X } from 'lucide-react'
 import { GitHubIcon, LinkedInIcon } from '../ui/BrandIcons'
-import { certificateAssets, galleryAssets, resumeAsset, videoAssets } from '../../data/assets'
+import { galleryAssets, resumeAsset, videoAssets } from '../../data/assets'
 import { navItems, person, workshops } from '../../data/site'
 import { Section } from '../ui/Section'
 import { cn } from '../../lib/cn'
@@ -32,40 +32,6 @@ export function Experience() {
           </p>
         </article>
       </div>
-    </Section>
-  )
-}
-
-export function Achievements() {
-  return (
-    <Section
-      id="achievements"
-      eyebrow="Certifications and achievements"
-      title="Only what can be shown."
-      kicker="The gallery is empty on purpose. Certificates appear here only when a real file is added to public/assets/certificates."
-    >
-      {certificateAssets.length === 0 ? (
-        <div className="grid place-items-center rounded-[32px] border border-dashed border-white/15 px-6 py-20 text-center">
-          <Award className="mb-4 text-cyan" />
-          <p className="display text-3xl">Certificate gallery reserved</p>
-          <p className="mt-3 max-w-md text-sm text-fog">
-            Drop PDFs or images into the certificates folder and register them in src/data/assets.ts. Nothing fabricated
-            is displayed.
-          </p>
-        </div>
-      ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {certificateAssets.map((c) => (
-            <a key={c.id} href={c.src} className="overflow-hidden rounded-3xl border border-white/10">
-              <img src={c.src} alt={c.title} className="h-56 w-full object-cover" />
-              <div className="p-4">
-                <p className="text-sm text-paper">{c.title}</p>
-                <p className="text-xs text-fog">{c.issuer}</p>
-              </div>
-            </a>
-          ))}
-        </div>
-      )}
     </Section>
   )
 }

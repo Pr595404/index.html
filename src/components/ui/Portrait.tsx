@@ -45,7 +45,7 @@ export function Portrait({ className = '' }: { className?: string }) {
       <img
         src={profileAssets.portrait}
         alt={`Portrait of ${person.fullName}`}
-        className="h-full w-full object-cover object-top filter contrast-[1.05]"
+        className="h-full w-full object-cover object-center"
         onError={() => setFailed(true)}
       />
       <div className="absolute inset-0 bg-linear-to-t from-void via-void/25 to-transparent pointer-events-none" />

@@ -1,9 +1,9 @@
 import { lazy, Suspense, type ReactNode } from 'react'
 import { ArrowDownRight, Download, Mail } from 'lucide-react'
 import { GitHubIcon, LinkedInIcon } from '../ui/BrandIcons'
-import { person, intro } from '../../data/site'
+import { person } from '../../data/site'
 import { resumeAsset } from '../../data/assets'
-import { Portrait } from '../ui/Portrait'
+import { HolographicPortrait } from './HolographicPortrait'
 import { useMagnetic } from '../../hooks/useMagnetic'
 
 const NeuralField = lazy(() =>
@@ -22,7 +22,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,rgba(77,141,255,0.16),transparent_42%),radial-gradient(ellipse_at_80%_80%,rgba(139,125,255,0.14),transparent_40%),linear-gradient(to_bottom,rgba(3,4,10,0.25),rgba(3,4,10,0.88))]" />
 
       <div className="relative mx-auto flex min-h-svh max-w-6xl flex-col justify-end px-5 pb-10 pt-28 md:px-8 md:pb-14">
-        <div className="mb-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.32em] text-cyan">
+        <div className="mb-6 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.32em] text-cyan">
           <span className="relative grid h-2 w-2 place-items-center">
             <span className="absolute h-2 w-2 rounded-full bg-cyan pulse-ring" />
             <span className="h-2 w-2 rounded-full bg-cyan" />
@@ -30,9 +30,9 @@ export function Hero() {
           {person.title}
         </div>
 
-        <div className="grid items-end gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <h1 className="display text-[14vw] leading-[0.78] text-paper sm:text-[12vw] lg:text-[6.6rem]">
+            <h1 className="display text-[13vw] leading-[0.8] text-paper sm:text-[11vw] lg:text-[6.4rem]">
               <span className="block kinetic">
                 <span className="translate-y-0">{person.firstName.toUpperCase()}</span>
               </span>
@@ -40,8 +40,11 @@ export function Hero() {
                 {person.lastName.toUpperCase()}
               </span>
             </h1>
-            <p className="serif mt-6 max-w-xl text-xl italic text-fog md:text-2xl">{person.tagline}</p>
-            <p className="mt-5 max-w-lg text-sm leading-relaxed text-fog md:text-base">{intro.short}</p>
+            <p className="serif mt-6 max-w-xl text-xl italic text-cyan/90 md:text-2xl">{person.tagline}</p>
+            <p className="mt-5 max-w-lg text-sm leading-relaxed text-fog md:text-base">
+              First-semester B.Tech CSE (AI & ML) student at Manav Rachna University, exploring artificial intelligence,
+              machine learning, and software development through structured programming and hands-on systems.
+            </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
@@ -49,9 +52,9 @@ export function Hero() {
                 ref={explore.ref as never}
                 onPointerMove={explore.onPointerMove}
                 onPointerLeave={explore.onPointerLeave}
-                className="inline-flex items-center gap-2 rounded-full bg-paper px-5 py-3 text-sm font-medium text-void transition-transform"
+                className="inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 text-sm font-medium text-void transition-transform hover:bg-white"
               >
-                Explore My Work
+                Explore Projects
                 <ArrowDownRight size={16} />
               </a>
               {resumeAsset.available ? (
@@ -61,7 +64,7 @@ export function Hero() {
                   ref={resume.ref as never}
                   onPointerMove={resume.onPointerMove}
                   onPointerLeave={resume.onPointerLeave}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm text-paper hover:bg-white/10 hover:border-cyan/40 transition"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm text-paper hover:bg-white/10 hover:border-cyan/40 transition"
                 >
                   <Download size={16} />
                   Download Resume
@@ -69,26 +72,15 @@ export function Hero() {
               ) : (
                 <a
                   href="#resume"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm text-paper"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm text-paper"
                 >
                   <Download size={16} />
                   Download Resume
                 </a>
               )}
             </div>
-          </div>
 
-          <div className="relative">
-            <div className="glass relative overflow-hidden rounded-[28px]">
-              <Portrait className="h-[340px] w-full md:h-[420px]" />
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
-                <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-cyan">First semester · 2026</p>
-                  <p className="mt-1 text-sm text-paper">{person.university}</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-4 flex items-center gap-3">
+            <div className="mt-8 flex items-center gap-3">
               <Social href={`mailto:${person.email}`} label="Email">
                 <Mail size={16} />
               </Social>
@@ -98,16 +90,24 @@ export function Hero() {
               <Social href={person.linkedin} label="LinkedIn">
                 <LinkedInIcon />
               </Social>
+              <span className="ml-2 font-mono text-[11px] text-fog/60">
+                {person.githubHandle}
+              </span>
             </div>
+          </div>
+
+          {/* Focal 3D Holographic Personal Portrait */}
+          <div className="relative w-full">
+            <HolographicPortrait className="w-full" />
           </div>
         </div>
 
         <div className="mt-12 flex items-center justify-between border-t border-white/10 pt-6 text-[11px] uppercase tracking-[0.22em] text-fog">
-          <a href="#about" className="inline-flex items-center gap-3">
+          <a href="#about" className="inline-flex items-center gap-3 hover:text-cyan transition-colors">
             <span className="h-10 w-px bg-cyan/70" />
             Scroll to enter the system
           </a>
-          <span className="hidden font-mono md:inline">Manav Rachna University</span>
+          <span className="hidden font-mono md:inline">Manav Rachna University · Faridabad</span>
         </div>
       </div>
     </section>

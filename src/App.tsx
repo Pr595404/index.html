@@ -2,12 +2,12 @@ import { BackToTop, Cursor, ProgressBar } from './components/layout/Chrome'
 import { Navbar } from './components/layout/Navbar'
 import { Hero } from './components/hero/Hero'
 import { About } from './components/sections/About'
-import { Education, Journey } from './components/sections/Journey'
+import { Journey } from './components/sections/Journey'
+import { Education } from './components/sections/Education'
 import { Skills } from './components/sections/Skills'
 import { Exploration } from './components/sections/Exploration'
 import { Projects } from './components/sections/Projects'
 import {
-  Achievements,
   Contact,
   Experience,
   Footer,
@@ -46,7 +46,6 @@ export default function App() {
         <Exploration />
         <Projects />
         <Experience />
-        <Achievements />
         <Workshops />
         <Gallery />
         <Videos />

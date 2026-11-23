@@ -22,12 +22,13 @@ export const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'journey', label: 'Journey' },
+  { id: 'education', label: 'Education' },
   { id: 'skills', label: 'Skills' },
   { id: 'exploration', label: 'Exploration' },
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
-  { id: 'achievements', label: 'Achievements' },
   { id: 'gallery', label: 'Gallery' },
+  { id: 'videos', label: 'Videos' },
   { id: 'contact', label: 'Contact' },
 ] as const
 

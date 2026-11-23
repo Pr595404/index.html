@@ -6,8 +6,13 @@
 export const assetRoot = `${import.meta.env.BASE_URL}assets`
 
 export const profileAssets = {
-  portrait: `${assetRoot}/profile/portrait.png`,
-  portraitAlt: `${assetRoot}/profile/portrait.jpg`,
+  portrait: `${assetRoot}/profile/prince-portrait.png`,
+  portraitAlt: `${assetRoot}/profile/portrait.png`,
+}
+
+export const universityAssets = {
+  logo: `${assetRoot}/university/manav-rachna-logo.png`,
+  campus: `${assetRoot}/university/manav-rachna-campus.png`,
 }
 
 export const resumeAsset = {
@@ -155,9 +160,4 @@ export const videoAssets = [
   },
 ] as const
 
-export const certificateAssets: Array<{
-  id: string
-  title: string
-  issuer: string
-  src: string
-}> = []
+
